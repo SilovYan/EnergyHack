@@ -50,16 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CheckerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CheckerForm.Designer.cs">
+      <DependentUpon>CheckerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extentions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TransformerCheckers\CurrentTransformerChecker.cs" />
+    <Compile Include="TransformerCheckers\ITransformerChecker.cs" />
+    <Compile Include="TransformerCheckers\VoltageTransformerChecker.cs" />
+    <Compile Include="Validators\Errors\AmperageError.cs" />
+    <Compile Include="Validators\Errors\IError.cs" />
+    <Compile Include="Validators\Errors\VolatageError.cs" />
+    <Compile Include="Validators\IValidator.cs" />
+    <EmbeddedResource Include="CheckerForm.resx">
+      <DependentUpon>CheckerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -84,5 +92,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

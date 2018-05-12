@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnergyHack
 {
-    public partial class Form1 : Form
+    public partial class CheckerForm : Form
     {
-        public Form1()
+        public CheckerForm()
         {
             InitializeComponent();
         }

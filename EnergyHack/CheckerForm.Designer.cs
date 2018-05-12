@@ -1,6 +1,6 @@
 ﻿namespace EnergyHack
 {
-    partial class Form1
+    partial class CheckerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -50,6 +50,8 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -72,6 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -130,13 +134,15 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem7,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem8});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(794, 422);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // TTControl
             // 
+            this.TTControl.Controls.Add(this.separatorControl2);
             this.TTControl.Controls.Add(this.separatorControl1);
             this.TTControl.Controls.Add(this.IRabMaxComboBoxEdit);
             this.TTControl.Controls.Add(this.I1NomComboBoxEdit);
@@ -174,9 +180,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 106);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 130);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(774, 296);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(774, 272);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // UNomTTComboBoxEdit
@@ -287,6 +293,22 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
+            // separatorControl2
+            // 
+            this.separatorControl2.Location = new System.Drawing.Point(12, 118);
+            this.separatorControl2.Name = "separatorControl2";
+            this.separatorControl2.Size = new System.Drawing.Size(770, 20);
+            this.separatorControl2.TabIndex = 15;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.separatorControl2;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 106);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(774, 24);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +339,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,6 +369,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
     }
 }
 
