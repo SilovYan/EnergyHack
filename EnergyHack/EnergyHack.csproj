@@ -66,6 +66,7 @@
     <Compile Include="TransformerCheckers\CurrentTransformerModeBase.cs" />
     <Compile Include="TransformerCheckers\ITransformerChecker.cs" />
     <Compile Include="TransformerCheckers\KError.cs" />
+    <Compile Include="TransformerCheckers\SectionError.cs" />
     <Compile Include="TransformerCheckers\VoltageTransformerChecker.cs" />
     <Compile Include="Validators\Errors\AmperageError.cs" />
     <Compile Include="Validators\Errors\IError.cs" />

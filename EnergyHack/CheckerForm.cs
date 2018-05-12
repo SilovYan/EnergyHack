@@ -43,7 +43,11 @@ namespace EnergyHack
                 IRabMaxComboBoxEdit,
                 I1NomComboBoxEdit,
                 UNomTTComboBoxEdit,
-                UNomNetworkComboBoxEdit
+                UNomNetworkComboBoxEdit,
+                CurrentLengthTextEdit,
+                SprTextEdit,
+                SaddTextEdit,
+                RkTextEdit
             };
             _typesToListsMap.TryAdd(Comercial, new[] { "0.2S", "0.5S" });
             _typesToListsMap.TryAdd(Technical, new[] { "0.1", "0.2", "0.5", "1" });
@@ -71,6 +75,18 @@ namespace EnergyHack
             if (voltageError != null)
             {
                 CurrentTransformerErrorProvider.SetError(UNomTTComboBoxEdit, voltageError.Description);
+            }
+
+            var kError = errors?.FirstOrDefault(e => e is KError);
+            if (kError != null)
+            {
+                CurrentTransformerErrorProvider.SetError(RkTextEdit, kError.Description);
+            }
+
+            var sectionError = errors?.FirstOrDefault(e => e is SectionError);
+            if (sectionError != null)
+            {
+                CurrentTransformerErrorProvider.SetError(sComboBoxEdit, sectionError.Description);
             }
         }
 
@@ -262,13 +278,21 @@ namespace EnergyHack
             {
                 _currentTransformerChecker.AccountingPart.SetSadd();
                 MessageBox.Show(
-                    "Рекомендуется уставновить догрузочное сопротивнение c мощностью не менее Sadd");
+                    @"Рекомендуется уставновить догрузочное сопротивнение c мощностью не менее Sadd");
                 SaddTextEdit.Text = _currentTransformerChecker.AccountingPart.Sadd.ToString();
+            }
+            if (!SaddVisible && SaddLayoutItem.Visible)
+            {
+                if (_currentTransformerChecker.AccountingPart != null)
+                {
+                    _currentTransformerChecker.AccountingPart.Sadd = 0;
+                    _currentTransformerChecker.AccountingPart.Rk = 0;
+                }
             }
 
             RkLayoutItem.Visibility = RkVisible ? LayoutVisibility.Always : LayoutVisibility.Never;
             SaddLayoutItem.Visibility = SaddVisible ? LayoutVisibility.Always : LayoutVisibility.Never;
-
+            _currentTransformerChecker.Validate();
         }
 
         private void FillAccuracy(string type)

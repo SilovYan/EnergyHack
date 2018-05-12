@@ -7,12 +7,12 @@ namespace EnergyHack.TransformerCheckers
     public class CurrentTransformerChecker : ITransformerChecker
     {
         private delegate IError Validator();
-        private double _UNomTT;
-        private double _UNetwork;
+        private double? _UNomTT;
+        private double? _UNetwork;
 
-        private double _I1nom;
-        private double _I2nom;
-        private double _IRabMax;
+        private double? _I1nom;
+        private double? _I2nom;
+        private double? _IRabMax;
 
         private ICollection<IError> _errors;
 
@@ -20,7 +20,7 @@ namespace EnergyHack.TransformerCheckers
 
         public CurrentTransformerAccountingMode AccountingPart { get; set; }
 
-        public double UNomTT
+        public double? UNomTT
         {
             get => _UNomTT;
             set
@@ -29,7 +29,7 @@ namespace EnergyHack.TransformerCheckers
                 Validate();
             }
         }
-        public double UNetwork
+        public double? UNetwork
         {
             get => _UNetwork;
             set
@@ -39,7 +39,7 @@ namespace EnergyHack.TransformerCheckers
             }
         }
 
-        public double I1nom
+        public double? I1nom
         {
             get => _I1nom;
             set
@@ -48,7 +48,7 @@ namespace EnergyHack.TransformerCheckers
                 Validate();
             }
         }
-        public double IRabMax
+        public double? IRabMax
         {
             get => _IRabMax;
             set
@@ -58,7 +58,7 @@ namespace EnergyHack.TransformerCheckers
             }
         }
 
-        public double I2Nom
+        public double? I2Nom
         {
             get => _I2nom;
             set
@@ -75,6 +75,7 @@ namespace EnergyHack.TransformerCheckers
 
             Validate(errors, ValidateU);
             Validate(errors, ValidateI);
+            Validate(errors, ValidateK);
 
             if (_errors.Equal(errors)) return;
 
@@ -91,19 +92,21 @@ namespace EnergyHack.TransformerCheckers
 
         private IError ValidateU()
         {
-            return UNomTT < UNetwork ? new VoltageError() : null;
+            return UNomTT is null || UNetwork is null || UNomTT < UNetwork ? new VoltageError() : null;
         }
 
         private IError ValidateI()
         {
-            return I1nom < IRabMax ? new AmperageError() : null;
+            return I1nom is null || IRabMax is null || I1nom < IRabMax ? new AmperageError() : null;
         }
 
         private IError ValidateK()
         {
             if (AccountingPart == null)
                 return null;
-            return AccountingPart.K > 0.5 ? null : new KError();
+            if (AccountingPart.K > 1)
+                return new SectionError();
+            return AccountingPart.RkVisible ? new KError() : null;
         }
     }
 }
