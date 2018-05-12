@@ -276,6 +276,7 @@
             this.CurrentTypeRadioGroup.Size = new System.Drawing.Size(177, 25);
             this.CurrentTypeRadioGroup.StyleController = this.AccountingModeControl;
             this.CurrentTypeRadioGroup.TabIndex = 7;
+            this.CurrentTypeRadioGroup.SelectedIndexChanged += new System.EventHandler(this.CurrentTypeRadioGroup_SelectedIndexChanged);
             // 
             // S2NomComboBoxEdit
             // 

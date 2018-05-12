@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using DevExpress.XtraEditors;
 
 namespace EnergyHack
 {
@@ -25,6 +27,13 @@ namespace EnergyHack
             }
 
             return true;
+        }
+
+        public static void ClearAndFill(this ComboBoxEdit comboBox, ICollection collection)
+        {
+            comboBox.Properties.Items.Clear();
+            comboBox.Properties.Items.AddRange(collection);
+            comboBox.SelectedIndex = 0;
         }
     }
 }

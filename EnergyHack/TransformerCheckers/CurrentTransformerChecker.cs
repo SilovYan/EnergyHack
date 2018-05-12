@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using EnergyHack.Validators.Errors;
 // ReSharper disable InconsistentNaming
 
@@ -12,6 +11,7 @@ namespace EnergyHack.TransformerCheckers
         private double _UNetwork;
 
         private double _I1nom;
+        private double _I2nom;
         private double _IRabMax;
 
         private ICollection<IError> _errors;
@@ -55,6 +55,17 @@ namespace EnergyHack.TransformerCheckers
             {
                 _IRabMax = value;
                 Validate();
+            }
+        }
+
+        public double I2Nom
+        {
+            get => _I2nom;
+            set
+            {
+                _I2nom = value;
+                if (AccountingPart != null)
+                    AccountingPart.I2Nom = value;
             }
         }
 
