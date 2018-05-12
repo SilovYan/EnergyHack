@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
@@ -11,7 +12,8 @@ namespace EnergyHack
 {
     public partial class CheckerForm : Form
     {
-        private CurrentTransformerChecker _currentTransformerChecker = new CurrentTransformerChecker();
+        private ICollection<Control> _controlsForValidate;
+        private readonly CurrentTransformerChecker _currentTransformerChecker = new CurrentTransformerChecker();
         private VoltageTransformerChecker _voltageTransformerChecker = new VoltageTransformerChecker();
 
         public ILayoutControl Current => TTControl;
@@ -26,17 +28,28 @@ namespace EnergyHack
 
             I1NomComboBoxEdit.SelectedIndexChanged += I1NomComboBoxEdit_SelectedIndexChanged;
             IRabMaxComboBoxEdit.TextChanged += IRabMaxComboBoxEdit_TextChanged;
-            _currentTransformerChecker.ErrorsChanged += _currentTransformerChecker_ErrorsChanged; ;
+            _currentTransformerChecker.ErrorsChanged += _currentTransformerChecker_ErrorsChanged;
+
+            _controlsForValidate = new List<Control>
+            {
+                IRabMaxComboBoxEdit,
+                I1NomComboBoxEdit,
+                UNomTTComboBoxEdit,
+                UNomNetworkComboBoxEdit
+            };
         }
 
-        private void _currentTransformerChecker_ErrorsChanged(object sender, System.Collections.Generic.ICollection<Validators.Errors.IError> errors)
+        private void ValidateCurrentTransformerControls()
+        {
+            foreach (var control in _controlsForValidate)
+                TryGetValue(control, CurrentTransformerErrorProvider, out _);
+        }
+
+        private void _currentTransformerChecker_ErrorsChanged(object sender, ICollection<IError> errors)
         {
             CurrentTransformerErrorProvider.ClearErrors();
 
-            TryGetValue(IRabMaxComboBoxEdit, CurrentTransformerErrorProvider, out _);
-            TryGetValue(I1NomComboBoxEdit, CurrentTransformerErrorProvider, out _);
-            TryGetValue(UNomTTComboBoxEdit, CurrentTransformerErrorProvider, out _);
-            TryGetValue(UNomNetworkComboBoxEdit, CurrentTransformerErrorProvider, out _);
+            ValidateCurrentTransformerControls();
 
             var amperageError = errors?.FirstOrDefault(e => e is AmperageError);
             if (amperageError != null)
@@ -69,7 +82,7 @@ namespace EnergyHack
             I1NomComboBoxEdit.SelectedIndex = 0;
         }
 
-        private void IRabMaxComboBoxEdit_TextChanged(object sender, System.EventArgs e)
+        private void IRabMaxComboBoxEdit_TextChanged(object sender, EventArgs e)
         {
             if (TryGetValue(IRabMaxComboBoxEdit, CurrentTransformerErrorProvider, out var value))
             {
@@ -77,7 +90,7 @@ namespace EnergyHack
             }
         }
 
-        private void I1NomComboBoxEdit_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void I1NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(TryGetValue(I1NomComboBoxEdit, CurrentTransformerErrorProvider, out var value))
             {
@@ -85,7 +98,7 @@ namespace EnergyHack
             }
         }
 
-        private void UNomTTComboBoxEdit_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void UNomTTComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TryGetValue(UNomTTComboBoxEdit, CurrentTransformerErrorProvider, out var value))
             {
@@ -93,7 +106,7 @@ namespace EnergyHack
             }
         }
 
-        private void UNomNetworkComboBoxEdit_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void UNomNetworkComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TryGetValue(UNomNetworkComboBoxEdit, CurrentTransformerErrorProvider, out var value))
             {
@@ -115,6 +128,94 @@ namespace EnergyHack
             }
             value = default(double);
             return false;
+        }
+
+        private void AccountingModeCheckEdit_CheckedChanged(object sender, EventArgs e)
+        {
+            AccountingModeControl.Enabled = AccountingModeCheckEdit.Checked;
+            if (AccountingModeCheckEdit.Checked)
+            {
+                _currentTransformerChecker.AccountingPart = new CurrentTransformerAccountingMode();
+                FillAccountingPart();
+            }
+            else
+            {
+                _currentTransformerChecker.AccountingPart = null;
+                ClearAccountingPart();
+            }
+        }
+
+        private void FillAccountingPart()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ClearAccountingPart()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DefenceModeCheckEdit_CheckedChanged(object sender, EventArgs e)
+        {
+            DefenceModeLayout.Enabled = DefenceModeCheckEdit.Checked;
+        }
+
+        private void I2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(I2NomComboBoxEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.I2Nom = value;
+            }
+        }
+
+        private void AccuracyClassTypeСomboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // TODO: тут не всё так просто
+        }
+
+        private void AccuracyClassComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             _currentTransformerChecker.AccountingPart.Accuracy = AccuracyClassComboBoxEdit.SelectedItem.ToString();
+        }
+
+        private void S2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(S2NomComboBoxEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.S2Nom = value;
+            }
+        }
+
+        private void CurrentLengthTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(CurrentLengthTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.CurrentLength = value;
+            }
+        }
+
+        private void sComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(sComboBoxEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.Spr = value;
+            }
+        }
+
+        private void RkTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RkTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.Rk = value;
+            }
+        }
+
+        private void SaddTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(SaddTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.Sadd = value;
+            }
         }
     }
 }

@@ -32,6 +32,31 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.TTControl = new DevExpress.XtraLayout.LayoutControl();
+            this.DefenceModeLayout = new DevExpress.XtraLayout.LayoutControl();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.AccountingModeControl = new DevExpress.XtraLayout.LayoutControl();
+            this.SaddTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.RkTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.sComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.CurrentLengthTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.CurrentTypeRadioGroup = new DevExpress.XtraEditors.RadioGroup();
+            this.S2NomComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.AccuracyClassComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.AccuracyClassTypeСomboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.RkLayoutItem = new DevExpress.XtraLayout.LayoutControlItem();
+            this.SaddLayoutItem = new DevExpress.XtraLayout.LayoutControlItem();
+            this.DefenceModeCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.AccountingModeCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.I2NomComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.IRabMaxComboBoxEdit = new DevExpress.XtraEditors.TextEdit();
@@ -50,48 +75,47 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.TNControl = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.CurrentTransformerErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.VoltageTransformerErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.I2NomComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.AccountingModeCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.DefenceModeCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.AccountingModeControl = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.DefenceModeLayout = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.AccuracyClassTypeСomboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.AccuracyClassComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.S2NomComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.CurrentTypeRadioGroup = new DevExpress.XtraEditors.RadioGroup();
-            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.CurrentLengthTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.sComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.RkTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.SaddTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TTControl)).BeginInit();
             this.TTControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DefenceModeLayout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountingModeControl)).BeginInit();
+            this.AccountingModeControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaddTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RkTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentLengthTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentTypeRadioGroup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.S2NomComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccuracyClassComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccuracyClassTypeСomboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RkLayoutItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaddLayoutItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DefenceModeCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountingModeCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.I2NomComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IRabMaxComboBoxEdit.Properties)).BeginInit();
@@ -108,42 +132,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TNControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTransformerErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageTransformerErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.I2NomComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountingModeCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DefenceModeCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountingModeControl)).BeginInit();
-            this.AccountingModeControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DefenceModeLayout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccuracyClassTypeСomboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccuracyClassComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.S2NomComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentTypeRadioGroup.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentLengthTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RkTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SaddTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -190,23 +189,288 @@
             this.TTControl.TabIndex = 0;
             this.TTControl.Text = "layoutControl1";
             // 
+            // DefenceModeLayout
+            // 
+            this.DefenceModeLayout.Enabled = false;
+            this.DefenceModeLayout.Location = new System.Drawing.Point(344, 223);
+            this.DefenceModeLayout.Name = "DefenceModeLayout";
+            this.DefenceModeLayout.Root = this.layoutControlGroup3;
+            this.DefenceModeLayout.Size = new System.Drawing.Size(328, 293);
+            this.DefenceModeLayout.TabIndex = 21;
+            this.DefenceModeLayout.Text = "layoutControl2";
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup3.GroupBordersVisible = false;
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(328, 293);
+            this.layoutControlGroup3.TextVisible = false;
+            // 
+            // AccountingModeControl
+            // 
+            this.AccountingModeControl.Controls.Add(this.SaddTextEdit);
+            this.AccountingModeControl.Controls.Add(this.RkTextEdit);
+            this.AccountingModeControl.Controls.Add(this.sComboBoxEdit);
+            this.AccountingModeControl.Controls.Add(this.CurrentLengthTextEdit);
+            this.AccountingModeControl.Controls.Add(this.CurrentTypeRadioGroup);
+            this.AccountingModeControl.Controls.Add(this.S2NomComboBoxEdit);
+            this.AccountingModeControl.Controls.Add(this.AccuracyClassComboBoxEdit);
+            this.AccountingModeControl.Controls.Add(this.AccuracyClassTypeСomboBoxEdit);
+            this.AccountingModeControl.Enabled = false;
+            this.AccountingModeControl.Location = new System.Drawing.Point(12, 223);
+            this.AccountingModeControl.Name = "AccountingModeControl";
+            this.AccountingModeControl.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(287, 423, 650, 400);
+            this.AccountingModeControl.Root = this.Root;
+            this.AccountingModeControl.Size = new System.Drawing.Size(328, 293);
+            this.AccountingModeControl.TabIndex = 20;
+            this.AccountingModeControl.Text = "layoutControl1";
+            // 
+            // SaddTextEdit
+            // 
+            this.SaddTextEdit.Location = new System.Drawing.Point(148, 176);
+            this.SaddTextEdit.Name = "SaddTextEdit";
+            this.SaddTextEdit.Size = new System.Drawing.Size(177, 20);
+            this.SaddTextEdit.StyleController = this.AccountingModeControl;
+            this.SaddTextEdit.TabIndex = 11;
+            this.SaddTextEdit.EditValueChanged += new System.EventHandler(this.SaddTextEdit_EditValueChanged);
+            // 
+            // RkTextEdit
+            // 
+            this.RkTextEdit.Location = new System.Drawing.Point(148, 152);
+            this.RkTextEdit.Name = "RkTextEdit";
+            this.RkTextEdit.Size = new System.Drawing.Size(177, 20);
+            this.RkTextEdit.StyleController = this.AccountingModeControl;
+            this.RkTextEdit.TabIndex = 10;
+            this.RkTextEdit.EditValueChanged += new System.EventHandler(this.RkTextEdit_EditValueChanged);
+            // 
+            // sComboBoxEdit
+            // 
+            this.sComboBoxEdit.Location = new System.Drawing.Point(148, 128);
+            this.sComboBoxEdit.Name = "sComboBoxEdit";
+            this.sComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.sComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.sComboBoxEdit.Size = new System.Drawing.Size(177, 20);
+            this.sComboBoxEdit.StyleController = this.AccountingModeControl;
+            this.sComboBoxEdit.TabIndex = 9;
+            this.sComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.sComboBoxEdit_SelectedIndexChanged);
+            // 
+            // CurrentLengthTextEdit
+            // 
+            this.CurrentLengthTextEdit.Location = new System.Drawing.Point(148, 104);
+            this.CurrentLengthTextEdit.Name = "CurrentLengthTextEdit";
+            this.CurrentLengthTextEdit.Size = new System.Drawing.Size(177, 20);
+            this.CurrentLengthTextEdit.StyleController = this.AccountingModeControl;
+            this.CurrentLengthTextEdit.TabIndex = 8;
+            this.CurrentLengthTextEdit.EditValueChanged += new System.EventHandler(this.CurrentLengthTextEdit_EditValueChanged);
+            // 
+            // CurrentTypeRadioGroup
+            // 
+            this.CurrentTypeRadioGroup.Location = new System.Drawing.Point(148, 75);
+            this.CurrentTypeRadioGroup.Name = "CurrentTypeRadioGroup";
+            this.CurrentTypeRadioGroup.Properties.Columns = 2;
+            this.CurrentTypeRadioGroup.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((byte)(0)), "Аллюминий"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((byte)(1)), "Медь")});
+            this.CurrentTypeRadioGroup.Size = new System.Drawing.Size(177, 25);
+            this.CurrentTypeRadioGroup.StyleController = this.AccountingModeControl;
+            this.CurrentTypeRadioGroup.TabIndex = 7;
+            // 
+            // S2NomComboBoxEdit
+            // 
+            this.S2NomComboBoxEdit.Location = new System.Drawing.Point(148, 51);
+            this.S2NomComboBoxEdit.Name = "S2NomComboBoxEdit";
+            this.S2NomComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.S2NomComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.S2NomComboBoxEdit.Size = new System.Drawing.Size(177, 20);
+            this.S2NomComboBoxEdit.StyleController = this.AccountingModeControl;
+            this.S2NomComboBoxEdit.TabIndex = 6;
+            this.S2NomComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.S2NomComboBoxEdit_SelectedIndexChanged);
+            // 
+            // AccuracyClassComboBoxEdit
+            // 
+            this.AccuracyClassComboBoxEdit.Location = new System.Drawing.Point(148, 27);
+            this.AccuracyClassComboBoxEdit.Name = "AccuracyClassComboBoxEdit";
+            this.AccuracyClassComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.AccuracyClassComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.AccuracyClassComboBoxEdit.Size = new System.Drawing.Size(177, 20);
+            this.AccuracyClassComboBoxEdit.StyleController = this.AccountingModeControl;
+            this.AccuracyClassComboBoxEdit.TabIndex = 5;
+            this.AccuracyClassComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.AccuracyClassComboBoxEdit_SelectedIndexChanged);
+            // 
+            // AccuracyClassTypeСomboBoxEdit
+            // 
+            this.AccuracyClassTypeСomboBoxEdit.Location = new System.Drawing.Point(148, 3);
+            this.AccuracyClassTypeСomboBoxEdit.Name = "AccuracyClassTypeСomboBoxEdit";
+            this.AccuracyClassTypeСomboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.AccuracyClassTypeСomboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.AccuracyClassTypeСomboBoxEdit.Size = new System.Drawing.Size(177, 20);
+            this.AccuracyClassTypeСomboBoxEdit.StyleController = this.AccountingModeControl;
+            this.AccuracyClassTypeСomboBoxEdit.TabIndex = 4;
+            this.AccuracyClassTypeСomboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.AccuracyClassTypeСomboBoxEdit_SelectedIndexChanged);
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem15,
+            this.emptySpaceItem2,
+            this.layoutControlItem16,
+            this.layoutControlItem17,
+            this.layoutControlItem18,
+            this.layoutControlItem19,
+            this.layoutControlItem20,
+            this.RkLayoutItem,
+            this.SaddLayoutItem});
+            this.Root.Name = "Root";
+            this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
+            this.Root.Size = new System.Drawing.Size(328, 293);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.AccuracyClassTypeСomboBoxEdit;
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem15.Text = "Тип класса точности";
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 197);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(326, 94);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.AccuracyClassComboBoxEdit;
+            this.layoutControlItem16.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem16.Text = "Класс точности";
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.S2NomComboBoxEdit;
+            this.layoutControlItem17.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem17.Text = "S2ном., ВА";
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // layoutControlItem18
+            // 
+            this.layoutControlItem18.Control = this.CurrentTypeRadioGroup;
+            this.layoutControlItem18.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem18.Name = "layoutControlItem18";
+            this.layoutControlItem18.Size = new System.Drawing.Size(326, 29);
+            this.layoutControlItem18.Text = "Тип проводника";
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.CurrentLengthTextEdit;
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 101);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem19.Text = "Длина проводника, м";
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.Control = this.sComboBoxEdit;
+            this.layoutControlItem20.Location = new System.Drawing.Point(0, 125);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem20.Text = "Сечение проводника, кв.мм";
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // RkLayoutItem
+            // 
+            this.RkLayoutItem.Control = this.RkTextEdit;
+            this.RkLayoutItem.Location = new System.Drawing.Point(0, 149);
+            this.RkLayoutItem.Name = "RkLayoutItem";
+            this.RkLayoutItem.Size = new System.Drawing.Size(326, 24);
+            this.RkLayoutItem.Text = "Rк, Ом";
+            this.RkLayoutItem.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // SaddLayoutItem
+            // 
+            this.SaddLayoutItem.Control = this.SaddTextEdit;
+            this.SaddLayoutItem.Location = new System.Drawing.Point(0, 173);
+            this.SaddLayoutItem.Name = "SaddLayoutItem";
+            this.SaddLayoutItem.Size = new System.Drawing.Size(326, 24);
+            this.SaddLayoutItem.Text = "Sadd, ВА";
+            this.SaddLayoutItem.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // DefenceModeCheckEdit
+            // 
+            this.DefenceModeCheckEdit.Location = new System.Drawing.Point(344, 200);
+            this.DefenceModeCheckEdit.Name = "DefenceModeCheckEdit";
+            this.DefenceModeCheckEdit.Properties.Caption = "Защита";
+            this.DefenceModeCheckEdit.Size = new System.Drawing.Size(328, 19);
+            this.DefenceModeCheckEdit.StyleController = this.TTControl;
+            this.DefenceModeCheckEdit.TabIndex = 19;
+            this.DefenceModeCheckEdit.CheckedChanged += new System.EventHandler(this.DefenceModeCheckEdit_CheckedChanged);
+            // 
+            // AccountingModeCheckEdit
+            // 
+            this.AccountingModeCheckEdit.Location = new System.Drawing.Point(12, 200);
+            this.AccountingModeCheckEdit.Name = "AccountingModeCheckEdit";
+            this.AccountingModeCheckEdit.Properties.Caption = "Измеререние и учет";
+            this.AccountingModeCheckEdit.Size = new System.Drawing.Size(328, 19);
+            this.AccountingModeCheckEdit.StyleController = this.TTControl;
+            this.AccountingModeCheckEdit.TabIndex = 18;
+            this.AccountingModeCheckEdit.CheckedChanged += new System.EventHandler(this.AccountingModeCheckEdit_CheckedChanged);
+            // 
+            // I2NomComboBoxEdit
+            // 
+            this.I2NomComboBoxEdit.Location = new System.Drawing.Point(80, 176);
+            this.I2NomComboBoxEdit.Name = "I2NomComboBoxEdit";
+            this.I2NomComboBoxEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.I2NomComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.I2NomComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.I2NomComboBoxEdit.Size = new System.Drawing.Size(592, 20);
+            this.I2NomComboBoxEdit.StyleController = this.TTControl;
+            this.I2NomComboBoxEdit.TabIndex = 17;
+            this.I2NomComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.I2NomComboBoxEdit_SelectedIndexChanged);
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(12, 159);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(235, 13);
+            this.labelControl3.StyleController = this.TTControl;
+            this.labelControl3.TabIndex = 16;
+            this.labelControl3.Text = "Проверка по вторичному току присоединения";
+            // 
             // separatorControl2
             // 
-            this.separatorControl2.Location = new System.Drawing.Point(12, 128);
+            this.separatorControl2.Location = new System.Drawing.Point(12, 126);
             this.separatorControl2.Name = "separatorControl2";
-            this.separatorControl2.Size = new System.Drawing.Size(660, 31);
+            this.separatorControl2.Size = new System.Drawing.Size(660, 29);
             this.separatorControl2.TabIndex = 15;
             // 
             // separatorControl1
             // 
             this.separatorControl1.Location = new System.Drawing.Point(12, 53);
             this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(660, 30);
+            this.separatorControl1.Size = new System.Drawing.Size(660, 28);
             this.separatorControl1.TabIndex = 14;
             // 
             // IRabMaxComboBoxEdit
             // 
-            this.IRabMaxComboBoxEdit.Location = new System.Drawing.Point(412, 104);
+            this.IRabMaxComboBoxEdit.Location = new System.Drawing.Point(412, 102);
             this.IRabMaxComboBoxEdit.Name = "IRabMaxComboBoxEdit";
             this.IRabMaxComboBoxEdit.Size = new System.Drawing.Size(260, 20);
             this.IRabMaxComboBoxEdit.StyleController = this.TTControl;
@@ -214,7 +478,7 @@
             // 
             // I1NomComboBoxEdit
             // 
-            this.I1NomComboBoxEdit.Location = new System.Drawing.Point(80, 104);
+            this.I1NomComboBoxEdit.Location = new System.Drawing.Point(80, 102);
             this.I1NomComboBoxEdit.Name = "I1NomComboBoxEdit";
             this.I1NomComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -225,7 +489,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 87);
+            this.labelControl2.Location = new System.Drawing.Point(12, 85);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(235, 13);
             this.labelControl2.StyleController = this.TTControl;
@@ -300,9 +564,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 531);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 508);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(664, 14);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(664, 37);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -326,7 +590,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.labelControl2;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 75);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 73);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(664, 17);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -335,7 +599,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.I1NomComboBoxEdit;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 92);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 90);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(332, 24);
             this.layoutControlItem4.Text = "I1ном., А";
@@ -344,7 +608,7 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.IRabMaxComboBoxEdit;
-            this.layoutControlItem7.Location = new System.Drawing.Point(332, 92);
+            this.layoutControlItem7.Location = new System.Drawing.Point(332, 90);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(332, 24);
             this.layoutControlItem7.Text = "Iраб.max, А";
@@ -355,24 +619,78 @@
             this.layoutControlItem6.Control = this.separatorControl1;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 41);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(664, 34);
+            this.layoutControlItem6.Size = new System.Drawing.Size(664, 32);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.separatorControl2;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 116);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 114);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(664, 35);
+            this.layoutControlItem8.Size = new System.Drawing.Size(664, 33);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.labelControl3;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 147);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(664, 17);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.I2NomComboBoxEdit;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 164);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(664, 24);
+            this.layoutControlItem10.Text = "I2ном., А";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(65, 13);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.AccountingModeCheckEdit;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 188);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(332, 23);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.DefenceModeCheckEdit;
+            this.layoutControlItem12.Location = new System.Drawing.Point(332, 188);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(332, 23);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.AccountingModeControl;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 211);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(332, 297);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.DefenceModeLayout;
+            this.layoutControlItem14.Location = new System.Drawing.Point(332, 211);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(332, 297);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem14.TextVisible = false;
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.TNControl);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(794, 422);
+            this.xtraTabPage2.Size = new System.Drawing.Size(684, 565);
             this.xtraTabPage2.Text = "Трансформатор напряжения";
             // 
             // TNControl
@@ -381,7 +699,7 @@
             this.TNControl.Location = new System.Drawing.Point(0, 0);
             this.TNControl.Name = "TNControl";
             this.TNControl.Root = this.layoutControlGroup2;
-            this.TNControl.Size = new System.Drawing.Size(794, 422);
+            this.TNControl.Size = new System.Drawing.Size(684, 565);
             this.TNControl.TabIndex = 0;
             this.TNControl.Text = "layoutControl2";
             // 
@@ -390,7 +708,7 @@
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(794, 422);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(684, 565);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // CurrentTransformerErrorProvider
@@ -400,321 +718,6 @@
             // VoltageTransformerErrorProvider
             // 
             this.VoltageTransformerErrorProvider.ContainerControl = this;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(12, 163);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(235, 13);
-            this.labelControl3.StyleController = this.TTControl;
-            this.labelControl3.TabIndex = 16;
-            this.labelControl3.Text = "Проверка по вторичному току присоединения";
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.labelControl3;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 151);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(664, 17);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            // 
-            // I2NomComboBoxEdit
-            // 
-            this.I2NomComboBoxEdit.Location = new System.Drawing.Point(80, 180);
-            this.I2NomComboBoxEdit.Name = "I2NomComboBoxEdit";
-            this.I2NomComboBoxEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.I2NomComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.I2NomComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.I2NomComboBoxEdit.Size = new System.Drawing.Size(592, 20);
-            this.I2NomComboBoxEdit.StyleController = this.TTControl;
-            this.I2NomComboBoxEdit.TabIndex = 17;
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.I2NomComboBoxEdit;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 168);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(664, 24);
-            this.layoutControlItem10.Text = "I2ном., А";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(65, 13);
-            // 
-            // AccountingModeCheckEdit
-            // 
-            this.AccountingModeCheckEdit.Location = new System.Drawing.Point(12, 204);
-            this.AccountingModeCheckEdit.Name = "AccountingModeCheckEdit";
-            this.AccountingModeCheckEdit.Properties.Caption = "Измеререние и учет";
-            this.AccountingModeCheckEdit.Size = new System.Drawing.Size(328, 19);
-            this.AccountingModeCheckEdit.StyleController = this.TTControl;
-            this.AccountingModeCheckEdit.TabIndex = 18;
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.AccountingModeCheckEdit;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 192);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(332, 23);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextVisible = false;
-            // 
-            // DefenceModeCheckEdit
-            // 
-            this.DefenceModeCheckEdit.Location = new System.Drawing.Point(344, 204);
-            this.DefenceModeCheckEdit.Name = "DefenceModeCheckEdit";
-            this.DefenceModeCheckEdit.Properties.Caption = "РЗА";
-            this.DefenceModeCheckEdit.Size = new System.Drawing.Size(328, 19);
-            this.DefenceModeCheckEdit.StyleController = this.TTControl;
-            this.DefenceModeCheckEdit.TabIndex = 19;
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.DefenceModeCheckEdit;
-            this.layoutControlItem12.Location = new System.Drawing.Point(332, 192);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(332, 23);
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem12.TextVisible = false;
-            // 
-            // AccountingModeControl
-            // 
-            this.AccountingModeControl.Controls.Add(this.SaddTextEdit);
-            this.AccountingModeControl.Controls.Add(this.RkTextEdit);
-            this.AccountingModeControl.Controls.Add(this.sComboBoxEdit);
-            this.AccountingModeControl.Controls.Add(this.CurrentLengthTextEdit);
-            this.AccountingModeControl.Controls.Add(this.CurrentTypeRadioGroup);
-            this.AccountingModeControl.Controls.Add(this.S2NomComboBoxEdit);
-            this.AccountingModeControl.Controls.Add(this.AccuracyClassComboBoxEdit);
-            this.AccountingModeControl.Controls.Add(this.AccuracyClassTypeСomboBoxEdit);
-            this.AccountingModeControl.Location = new System.Drawing.Point(12, 227);
-            this.AccountingModeControl.Name = "AccountingModeControl";
-            this.AccountingModeControl.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(287, 423, 650, 400);
-            this.AccountingModeControl.Root = this.Root;
-            this.AccountingModeControl.Size = new System.Drawing.Size(328, 312);
-            this.AccountingModeControl.TabIndex = 20;
-            this.AccountingModeControl.Text = "layoutControl1";
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.AccountingModeControl;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 215);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(332, 316);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem13.TextVisible = false;
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem15,
-            this.emptySpaceItem2,
-            this.layoutControlItem16,
-            this.layoutControlItem17,
-            this.layoutControlItem18,
-            this.layoutControlItem19,
-            this.layoutControlItem20,
-            this.layoutControlItem21,
-            this.layoutControlItem22});
-            this.Root.Name = "Root";
-            this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.Root.Size = new System.Drawing.Size(328, 312);
-            this.Root.TextVisible = false;
-            // 
-            // DefenceModeLayout
-            // 
-            this.DefenceModeLayout.Location = new System.Drawing.Point(344, 227);
-            this.DefenceModeLayout.Name = "DefenceModeLayout";
-            this.DefenceModeLayout.Root = this.layoutControlGroup3;
-            this.DefenceModeLayout.Size = new System.Drawing.Size(328, 312);
-            this.DefenceModeLayout.TabIndex = 21;
-            this.DefenceModeLayout.Text = "layoutControl2";
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.DefenceModeLayout;
-            this.layoutControlItem14.Location = new System.Drawing.Point(332, 215);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(332, 316);
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem14.TextVisible = false;
-            // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup3.GroupBordersVisible = false;
-            this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(328, 312);
-            this.layoutControlGroup3.TextVisible = false;
-            // 
-            // AccuracyClassTypeСomboBoxEdit
-            // 
-            this.AccuracyClassTypeСomboBoxEdit.Location = new System.Drawing.Point(149, 3);
-            this.AccuracyClassTypeСomboBoxEdit.Name = "AccuracyClassTypeСomboBoxEdit";
-            this.AccuracyClassTypeСomboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AccuracyClassTypeСomboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.AccuracyClassTypeСomboBoxEdit.Size = new System.Drawing.Size(176, 20);
-            this.AccuracyClassTypeСomboBoxEdit.StyleController = this.AccountingModeControl;
-            this.AccuracyClassTypeСomboBoxEdit.TabIndex = 4;
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.AccuracyClassTypeСomboBoxEdit;
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(326, 24);
-            this.layoutControlItem15.Text = "Тип класса точности";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(142, 13);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 197);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(326, 113);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // AccuracyClassComboBoxEdit
-            // 
-            this.AccuracyClassComboBoxEdit.Location = new System.Drawing.Point(149, 27);
-            this.AccuracyClassComboBoxEdit.Name = "AccuracyClassComboBoxEdit";
-            this.AccuracyClassComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AccuracyClassComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.AccuracyClassComboBoxEdit.Size = new System.Drawing.Size(176, 20);
-            this.AccuracyClassComboBoxEdit.StyleController = this.AccountingModeControl;
-            this.AccuracyClassComboBoxEdit.TabIndex = 5;
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.AccuracyClassComboBoxEdit;
-            this.layoutControlItem16.Location = new System.Drawing.Point(0, 24);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(326, 24);
-            this.layoutControlItem16.Text = "Класс точности";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(142, 13);
-            // 
-            // S2NomComboBoxEdit
-            // 
-            this.S2NomComboBoxEdit.Location = new System.Drawing.Point(149, 51);
-            this.S2NomComboBoxEdit.Name = "S2NomComboBoxEdit";
-            this.S2NomComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.S2NomComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.S2NomComboBoxEdit.Size = new System.Drawing.Size(176, 20);
-            this.S2NomComboBoxEdit.StyleController = this.AccountingModeControl;
-            this.S2NomComboBoxEdit.TabIndex = 6;
-            // 
-            // layoutControlItem17
-            // 
-            this.layoutControlItem17.Control = this.S2NomComboBoxEdit;
-            this.layoutControlItem17.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(326, 24);
-            this.layoutControlItem17.Text = "S2ном., ВА";
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(142, 13);
-            // 
-            // CurrentTypeRadioGroup
-            // 
-            this.CurrentTypeRadioGroup.Location = new System.Drawing.Point(149, 75);
-            this.CurrentTypeRadioGroup.Name = "CurrentTypeRadioGroup";
-            this.CurrentTypeRadioGroup.Properties.Columns = 2;
-            this.CurrentTypeRadioGroup.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((byte)(0)), "Аллюминий"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((byte)(1)), "Медь")});
-            this.CurrentTypeRadioGroup.Size = new System.Drawing.Size(176, 25);
-            this.CurrentTypeRadioGroup.StyleController = this.AccountingModeControl;
-            this.CurrentTypeRadioGroup.TabIndex = 7;
-            // 
-            // layoutControlItem18
-            // 
-            this.layoutControlItem18.Control = this.CurrentTypeRadioGroup;
-            this.layoutControlItem18.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(326, 29);
-            this.layoutControlItem18.Text = "Тип проводника";
-            this.layoutControlItem18.TextSize = new System.Drawing.Size(142, 13);
-            // 
-            // CurrentLengthTextEdit
-            // 
-            this.CurrentLengthTextEdit.Location = new System.Drawing.Point(149, 104);
-            this.CurrentLengthTextEdit.Name = "CurrentLengthTextEdit";
-            this.CurrentLengthTextEdit.Size = new System.Drawing.Size(176, 20);
-            this.CurrentLengthTextEdit.StyleController = this.AccountingModeControl;
-            this.CurrentLengthTextEdit.TabIndex = 8;
-            // 
-            // layoutControlItem19
-            // 
-            this.layoutControlItem19.Control = this.CurrentLengthTextEdit;
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 101);
-            this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(326, 24);
-            this.layoutControlItem19.Text = "Длина проводника, м";
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(142, 13);
-            // 
-            // sComboBoxEdit
-            // 
-            this.sComboBoxEdit.Location = new System.Drawing.Point(149, 128);
-            this.sComboBoxEdit.Name = "sComboBoxEdit";
-            this.sComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.sComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.sComboBoxEdit.Size = new System.Drawing.Size(176, 20);
-            this.sComboBoxEdit.StyleController = this.AccountingModeControl;
-            this.sComboBoxEdit.TabIndex = 9;
-            // 
-            // layoutControlItem20
-            // 
-            this.layoutControlItem20.Control = this.sComboBoxEdit;
-            this.layoutControlItem20.Location = new System.Drawing.Point(0, 125);
-            this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(326, 24);
-            this.layoutControlItem20.Text = "Сечение проводника, кв.мм";
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(142, 13);
-            // 
-            // RkTextEdit
-            // 
-            this.RkTextEdit.Location = new System.Drawing.Point(149, 152);
-            this.RkTextEdit.Name = "RkTextEdit";
-            this.RkTextEdit.Size = new System.Drawing.Size(176, 20);
-            this.RkTextEdit.StyleController = this.AccountingModeControl;
-            this.RkTextEdit.TabIndex = 10;
-            // 
-            // layoutControlItem21
-            // 
-            this.layoutControlItem21.Control = this.RkTextEdit;
-            this.layoutControlItem21.Location = new System.Drawing.Point(0, 149);
-            this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(326, 24);
-            this.layoutControlItem21.Text = "Rк, Ом";
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(142, 13);
-            // 
-            // SaddTextEdit
-            // 
-            this.SaddTextEdit.Location = new System.Drawing.Point(149, 176);
-            this.SaddTextEdit.Name = "SaddTextEdit";
-            this.SaddTextEdit.Size = new System.Drawing.Size(176, 20);
-            this.SaddTextEdit.StyleController = this.AccountingModeControl;
-            this.SaddTextEdit.TabIndex = 11;
-            // 
-            // layoutControlItem22
-            // 
-            this.layoutControlItem22.Control = this.SaddTextEdit;
-            this.layoutControlItem22.Location = new System.Drawing.Point(0, 173);
-            this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(326, 24);
-            this.layoutControlItem22.Text = "Sadd, ВА";
-            this.layoutControlItem22.TextSize = new System.Drawing.Size(142, 13);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(1, 566);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(684, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // CheckerForm
             // 
@@ -726,11 +729,34 @@
             this.Text = "Проверка трансформаторов или чет такое";
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabControl1.PerformLayout();
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TTControl)).EndInit();
             this.TTControl.ResumeLayout(false);
-            this.TTControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DefenceModeLayout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountingModeControl)).EndInit();
+            this.AccountingModeControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SaddTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RkTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentLengthTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentTypeRadioGroup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.S2NomComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccuracyClassComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccuracyClassTypeСomboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RkLayoutItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaddLayoutItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DefenceModeCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountingModeCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.I2NomComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IRabMaxComboBoxEdit.Properties)).EndInit();
@@ -747,42 +773,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TNControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTransformerErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageTransformerErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.I2NomComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountingModeCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DefenceModeCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountingModeControl)).EndInit();
-            this.AccountingModeControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DefenceModeLayout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccuracyClassTypeСomboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccuracyClassComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.S2NomComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentTypeRadioGroup.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentLengthTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RkTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SaddTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -831,7 +832,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private DevExpress.XtraEditors.ComboBoxEdit AccuracyClassTypeСomboBoxEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraEditors.ComboBoxEdit AccuracyClassComboBoxEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraEditors.ComboBoxEdit S2NomComboBoxEdit;
@@ -844,9 +844,9 @@
         private DevExpress.XtraEditors.TextEdit RkTextEdit;
         private DevExpress.XtraEditors.ComboBoxEdit sComboBoxEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private DevExpress.XtraLayout.LayoutControlItem RkLayoutItem;
+        private DevExpress.XtraLayout.LayoutControlItem SaddLayoutItem;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }
 
