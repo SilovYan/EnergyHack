@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using EnergyHack.Validators;
 using EnergyHack.Validators.Errors;
 
 namespace EnergyHack.TransformerCheckers
 {
+    public delegate void ErrorsChangedHandler(object sender, ICollection<IError> errors);
     public interface ITransformerChecker
     {
-        IEnumerable<IError> Errors { get; }
+        event ErrorsChangedHandler ErrorsChanged;
 
         void Validate();
     }

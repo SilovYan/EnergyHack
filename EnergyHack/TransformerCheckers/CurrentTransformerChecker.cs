@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using EnergyHack.Validators.Errors;
+// ReSharper disable InconsistentNaming
 
 namespace EnergyHack.TransformerCheckers
 {
@@ -12,9 +14,9 @@ namespace EnergyHack.TransformerCheckers
         private double _I1nom;
         private double _IRabMax;
 
-        private IList<IError> _errors;
+        private ICollection<IError> _errors;
 
-        public IEnumerable<IError> Errors => _errors;
+        public event ErrorsChangedHandler ErrorsChanged;
 
         public double UNomTT
         {
@@ -56,27 +58,30 @@ namespace EnergyHack.TransformerCheckers
 
         public void Validate()
         {
-            _errors = new List<IError>();
+            var errors = new List<IError>();
 
-            Validate(ValidateU);
-            Validate(ValidateI);
+            Validate(errors, ValidateU);
+            Validate(errors, ValidateI);
 
-            _errors = Errors.IsNullOrEmpty() ? null : _errors;
+            if (_errors.Equal(errors)) return;
+
+            _errors = errors.IsNullOrEmpty() ? null : errors;
+            ErrorsChanged?.Invoke(this, _errors);
         }
 
-        private void Validate(Validator validator)
+        private static void Validate(ICollection<IError> errors, Validator validator)
         {
             var error = validator();
             if (error != null)
-                _errors.Add(error);
+                errors.Add(error);
         }
 
-        public IError ValidateU()
+        private IError ValidateU()
         {
             return UNomTT < UNetwork ? new VoltageError() : null;
         }
 
-        public IError ValidateI()
+        private IError ValidateI()
         {
             return I1nom < IRabMax ? new AmperageError() : null;
         }

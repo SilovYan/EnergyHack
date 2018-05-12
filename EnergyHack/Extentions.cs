@@ -9,5 +9,22 @@ namespace EnergyHack
         {
             return e == null || !e.Any();
         }
+
+        public static bool Equal<T>(this ICollection<T> collectA, ICollection<T> collectB)
+        {
+            if (Equals(collectA, collectB))
+                return true;
+            if (collectA == null || collectB == null)
+                return false;
+            if (collectA.Count != collectB.Count)
+                return false;
+            for (var i = 0; i < collectA.Count; i++)
+            {
+                if (!Equals(collectA.ElementAt(i), collectB.ElementAt(i)))
+                    return false;
+            }
+
+            return true;
+        }
     }
 }
