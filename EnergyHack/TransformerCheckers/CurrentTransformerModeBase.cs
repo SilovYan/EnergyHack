@@ -11,7 +11,7 @@
         public double S2Nom { get; set; }
         public CurrentType CurrentType { get; set; }
         public double CurrentLength { get; set; }
-        public double CuddentS { get; set; }
-        public double Rpr => CurrentLength / ((double) CurrentType / 10 * CuddentS);
+        public double CurrentS { get; set; }
+        public double Rpr => CurrentLength / ((double) CurrentType / 10 * CurrentS);
     }
 }

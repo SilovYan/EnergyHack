@@ -86,6 +86,8 @@
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.CurrentTransformerErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.VoltageTransformerErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.SprTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -143,6 +145,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTransformerErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageTransformerErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SprTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -209,6 +213,7 @@
             // 
             // AccountingModeControl
             // 
+            this.AccountingModeControl.Controls.Add(this.SprTextEdit);
             this.AccountingModeControl.Controls.Add(this.SaddTextEdit);
             this.AccountingModeControl.Controls.Add(this.RkTextEdit);
             this.AccountingModeControl.Controls.Add(this.sComboBoxEdit);
@@ -237,7 +242,7 @@
             // 
             // RkTextEdit
             // 
-            this.RkTextEdit.Location = new System.Drawing.Point(148, 152);
+            this.RkTextEdit.Location = new System.Drawing.Point(148, 200);
             this.RkTextEdit.Name = "RkTextEdit";
             this.RkTextEdit.Size = new System.Drawing.Size(177, 20);
             this.RkTextEdit.StyleController = this.AccountingModeControl;
@@ -327,6 +332,7 @@
             this.layoutControlItem19,
             this.layoutControlItem20,
             this.RkLayoutItem,
+            this.layoutControlItem21,
             this.SaddLayoutItem});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
@@ -345,9 +351,9 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 197);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 221);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(326, 94);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(326, 70);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem16
@@ -398,7 +404,7 @@
             // RkLayoutItem
             // 
             this.RkLayoutItem.Control = this.RkTextEdit;
-            this.RkLayoutItem.Location = new System.Drawing.Point(0, 149);
+            this.RkLayoutItem.Location = new System.Drawing.Point(0, 197);
             this.RkLayoutItem.Name = "RkLayoutItem";
             this.RkLayoutItem.Size = new System.Drawing.Size(326, 24);
             this.RkLayoutItem.Text = "Rк, Ом";
@@ -422,6 +428,7 @@
             this.DefenceModeCheckEdit.StyleController = this.TTControl;
             this.DefenceModeCheckEdit.TabIndex = 19;
             this.DefenceModeCheckEdit.CheckedChanged += new System.EventHandler(this.DefenceModeCheckEdit_CheckedChanged);
+            this.DefenceModeCheckEdit.EditValueChanged += new System.EventHandler(this.DefenceModeCheckEdit_EditValueChanged);
             // 
             // AccountingModeCheckEdit
             // 
@@ -720,6 +727,24 @@
             // 
             this.VoltageTransformerErrorProvider.ContainerControl = this;
             // 
+            // SprTextEdit
+            // 
+            this.SprTextEdit.Location = new System.Drawing.Point(148, 152);
+            this.SprTextEdit.Name = "SprTextEdit";
+            this.SprTextEdit.Size = new System.Drawing.Size(177, 20);
+            this.SprTextEdit.StyleController = this.AccountingModeControl;
+            this.SprTextEdit.TabIndex = 12;
+            this.SprTextEdit.EditValueChanged += new System.EventHandler(this.SprTextEdit_EditValueChanged);
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.SprTextEdit;
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 149);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem21.Text = "S проводниика, ВА";
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(142, 13);
+            // 
             // CheckerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -785,6 +810,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTransformerErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageTransformerErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SprTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -848,6 +875,8 @@
         private DevExpress.XtraLayout.LayoutControlItem RkLayoutItem;
         private DevExpress.XtraLayout.LayoutControlItem SaddLayoutItem;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraEditors.TextEdit SprTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
     }
 }
 

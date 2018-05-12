@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraLayout;
+using DevExpress.XtraLayout.Utils;
 using EnergyHack.TransformerCheckers;
 using EnergyHack.Validators.Errors;
 
@@ -131,6 +132,7 @@ namespace EnergyHack
             {
                 _currentTransformerChecker.I2Nom = value;
             }
+            UpdateVisibleRkAndSadd();
         }
 
         private void AccuracyClassTypeСomboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,11 +152,13 @@ namespace EnergyHack
                     _currentTransformerChecker.AccountingPart.AccuracyClass = AccuracyClass.Indicating;
                     break;
             }
+            UpdateVisibleRkAndSadd();
         }
 
         private void AccuracyClassComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
             _currentTransformerChecker.AccountingPart.Accuracy = AccuracyClassComboBoxEdit.SelectedItem.ToString();
+            UpdateVisibleRkAndSadd();
         }
 
         private void S2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
@@ -163,6 +167,7 @@ namespace EnergyHack
             {
                 _currentTransformerChecker.AccountingPart.S2Nom = value;
             }
+            UpdateVisibleRkAndSadd();
         }
 
         private void CurrentLengthTextEdit_EditValueChanged(object sender, EventArgs e)
@@ -171,14 +176,16 @@ namespace EnergyHack
             {
                 _currentTransformerChecker.AccountingPart.CurrentLength = value;
             }
+            UpdateVisibleRkAndSadd();
         }
 
         private void sComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TryGetValue(sComboBoxEdit, CurrentTransformerErrorProvider, out var value))
             {
-                _currentTransformerChecker.AccountingPart.Spr = value;
+                _currentTransformerChecker.AccountingPart.CurrentS = value;
             }
+            UpdateVisibleRkAndSadd();
         }
 
         private void RkTextEdit_EditValueChanged(object sender, EventArgs e)
@@ -199,7 +206,20 @@ namespace EnergyHack
 
         private void CurrentTypeRadioGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FillCurrentS((byte)CurrentTypeRadioGroup.SelectedIndex);
+            var index = (byte) CurrentTypeRadioGroup.SelectedIndex;
+            _currentTransformerChecker.AccountingPart.CurrentType =
+                index == 0 ? CurrentType.Aluminium : CurrentType.Copper;
+            FillCurrentS(index);
+            UpdateVisibleRkAndSadd();
+        }
+
+        private void SprTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(SprTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.Spr = value;
+            }
+            UpdateVisibleRkAndSadd();
         }
 
         #endregion
@@ -229,6 +249,26 @@ namespace EnergyHack
             var s2Nom = new[] { 0.5, 1, 2, 2.5, 5, 3, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100 };
             S2NomComboBoxEdit.ClearAndFill(s2Nom);
             AccuracyClassTypeСomboBoxEdit.ClearAndFill(_typesToListsMap.Keys.ToList());
+
+            UpdateVisibleRkAndSadd();
+        }
+
+        private void UpdateVisibleRkAndSadd()
+        {
+            var RkVisible = _currentTransformerChecker.AccountingPart?.RkVisible ?? false;
+            var SaddVisible = _currentTransformerChecker.AccountingPart?.SaddVisible ?? false;
+
+            if (SaddVisible && !SaddLayoutItem.Visible)
+            {
+                _currentTransformerChecker.AccountingPart.SetSadd();
+                MessageBox.Show(
+                    "Рекомендуется уставновить догрузочное сопротивнение c мощностью не менее Sadd");
+                SaddTextEdit.Text = _currentTransformerChecker.AccountingPart.Sadd.ToString();
+            }
+
+            RkLayoutItem.Visibility = RkVisible ? LayoutVisibility.Always : LayoutVisibility.Never;
+            SaddLayoutItem.Visibility = SaddVisible ? LayoutVisibility.Always : LayoutVisibility.Never;
+
         }
 
         private void FillAccuracy(string type)
@@ -271,6 +311,11 @@ namespace EnergyHack
             }
             value = default(double);
             return false;
+        }
+
+        private void DefenceModeCheckEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
