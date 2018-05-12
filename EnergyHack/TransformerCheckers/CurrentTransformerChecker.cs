@@ -98,5 +98,12 @@ namespace EnergyHack.TransformerCheckers
         {
             return I1nom < IRabMax ? new AmperageError() : null;
         }
+
+        private IError ValidateK()
+        {
+            if (AccountingPart == null)
+                return null;
+            return AccountingPart.K > 0.5 ? null : new KError();
+        }
     }
 }
