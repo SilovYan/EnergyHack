@@ -18,6 +18,8 @@ namespace EnergyHack.TransformerCheckers
 
         public event ErrorsChangedHandler ErrorsChanged;
 
+        public CurrentTransformerAccountingMode AccountingPart { get; set; }
+
         public double UNomTT
         {
             get => _UNomTT;
