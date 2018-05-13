@@ -273,6 +273,7 @@
             // 
             // RzaRkTextEdit
             // 
+            this.RzaRkTextEdit.EditValue = "0";
             this.RzaRkTextEdit.Location = new System.Drawing.Point(148, 224);
             this.RzaRkTextEdit.Name = "RzaRkTextEdit";
             this.RzaRkTextEdit.Size = new System.Drawing.Size(177, 20);
