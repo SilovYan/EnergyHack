@@ -562,5 +562,52 @@ namespace EnergyHack
             value = default(double);
             return false;
         }
+
+        private void iуTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(iуTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.Iy = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void iprsTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(iprsTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.Iprs = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void BkTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(BkTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.Bk = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void IterTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+            if (TryGetValue(IterTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.Iter = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void TterTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+            if (TryGetValue(TterTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.TTer = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
     }
 }

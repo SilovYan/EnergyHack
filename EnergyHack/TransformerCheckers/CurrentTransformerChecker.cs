@@ -75,6 +75,12 @@ namespace EnergyHack.TransformerCheckers
             }
         }
 
+        public double? Iy { get; set; }
+        public double? Iprs { get; set; }
+        public double? Bk { get; set; }
+        public double? Iter { get; set; }
+        public double? TTer;
+
         public void Validate()
         {
             var errors = new List<IError>();
@@ -84,11 +90,23 @@ namespace EnergyHack.TransformerCheckers
             Validate(errors, ValidateK);
             Validate(errors, ValidateKSecurity);
             Validate(errors, ValidateRza);
+            Validate(errors, ValidateIsmall);
+            Validate(errors, ValidateBk);
 
             if (_errors.Equal(errors)) return;
 
             _errors = errors.IsNullOrEmpty() ? null : errors;
             ErrorsChanged?.Invoke(this, _errors);
+        }
+
+        private IError ValidateBk()
+        {
+            return Iy > Iprs ? new BkError() : null;
+        }
+
+        private IError ValidateIsmall()
+        {
+            return Bk > TTer * Iter*Iter ? new IsmallError() : null;
         }
 
 

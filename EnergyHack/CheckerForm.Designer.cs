@@ -1189,6 +1189,7 @@
             this.iуTextEdit.Size = new System.Drawing.Size(164, 20);
             this.iуTextEdit.StyleController = this.TTControl;
             this.iуTextEdit.TabIndex = 23;
+            this.iуTextEdit.EditValueChanged += new System.EventHandler(this.iуTextEdit_EditValueChanged);
             // 
             // layoutControlItem37
             // 
@@ -1206,6 +1207,7 @@
             this.iprsTextEdit.Size = new System.Drawing.Size(162, 20);
             this.iprsTextEdit.StyleController = this.TTControl;
             this.iprsTextEdit.TabIndex = 24;
+            this.iprsTextEdit.EditValueChanged += new System.EventHandler(this.iprsTextEdit_EditValueChanged);
             // 
             // layoutControlItem38
             // 
@@ -1273,6 +1275,7 @@
             this.BkTextEdit.Size = new System.Drawing.Size(50, 20);
             this.BkTextEdit.StyleController = this.TTControl;
             this.BkTextEdit.TabIndex = 28;
+            this.BkTextEdit.EditValueChanged += new System.EventHandler(this.BkTextEdit_EditValueChanged);
             // 
             // layoutControlItem42
             // 
@@ -1290,6 +1293,7 @@
             this.TterTextEdit.Size = new System.Drawing.Size(50, 20);
             this.TterTextEdit.StyleController = this.TTControl;
             this.TterTextEdit.TabIndex = 29;
+            this.TterTextEdit.EditValueChanged += new System.EventHandler(this.TterTextEdit_EditValueChanged);
             // 
             // layoutControlItem43
             // 
@@ -1307,6 +1311,7 @@
             this.IterTextEdit.Size = new System.Drawing.Size(51, 20);
             this.IterTextEdit.StyleController = this.TTControl;
             this.IterTextEdit.TabIndex = 30;
+            this.IterTextEdit.EditValueChanged += new System.EventHandler(this.IterTextEdit_EditValueChanged);
             // 
             // layoutControlItem44
             // 
