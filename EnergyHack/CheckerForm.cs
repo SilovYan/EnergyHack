@@ -73,14 +73,20 @@ namespace EnergyHack
             var duError = errors?.FirstOrDefault(e => e is DUError);
             if (duError != null)
             {
-                VoltageTransformerErrorProvider.SetError(VoltMaxSTextEdit, duError.Description);
+                VoltageTransformerErrorProvider.SetError(dUTextEdit, duError.Description);
             }
+
+            dUTextEdit.Text = _voltageTransformerChecker.DU.ToString();
 
             var smallError = errors?.FirstOrDefault(e => e is KloadTooSmallError);
             if (smallError != null)
             {
                 VoltRecomentRTextEdit.Text = _voltageTransformerChecker.Radd.ToString();
                 VoltageTransformerErrorProvider.SetError(VoltRecomentRTextEdit, smallError.Description, ErrorType.Information);
+            }
+            else
+            {
+                VoltRecomentRTextEdit.Text = "Всё ок";
             }
 
             var bigError = errors?.FirstOrDefault(e => e is KloadTooBigError);

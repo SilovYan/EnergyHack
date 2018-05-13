@@ -160,6 +160,8 @@
             this.layoutControlItem56 = new DevExpress.XtraLayout.LayoutControlItem();
             this.CurrentTransformerErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.VoltageTransformerErrorProvider = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dUTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem57 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -289,6 +291,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTransformerErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageTransformerErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dUTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -1349,6 +1353,7 @@
             // 
             // TNControl
             // 
+            this.TNControl.Controls.Add(this.dUTextEdit);
             this.TNControl.Controls.Add(this.separatorControl6);
             this.TNControl.Controls.Add(this.VoltsCurrentTextEdit);
             this.TNControl.Controls.Add(this.VoltCurrentLengthTextEdit);
@@ -1567,10 +1572,10 @@
             // 
             this.labelControl7.Location = new System.Drawing.Point(12, 12);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(95, 13);
+            this.labelControl7.Size = new System.Drawing.Size(96, 13);
             this.labelControl7.StyleController = this.TNControl;
             this.labelControl7.TabIndex = 4;
-            this.labelControl7.Text = "Проверка ТТ по Uн";
+            this.labelControl7.Text = "Проверка ТН по Uн";
             // 
             // layoutControlGroup2
             // 
@@ -1589,7 +1594,8 @@
             this.layoutControlItem53,
             this.layoutControlItem54,
             this.layoutControlItem55,
-            this.layoutControlItem56});
+            this.layoutControlItem56,
+            this.layoutControlItem57});
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Size = new System.Drawing.Size(696, 689);
             this.layoutControlGroup2.TextVisible = false;
@@ -1606,9 +1612,9 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 257);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 281);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(676, 412);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(676, 388);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem46
@@ -1617,7 +1623,7 @@
             this.layoutControlItem46.Location = new System.Drawing.Point(0, 17);
             this.layoutControlItem46.Name = "layoutControlItem46";
             this.layoutControlItem46.Size = new System.Drawing.Size(338, 24);
-            this.layoutControlItem46.Text = "Uн тт, кВ";
+            this.layoutControlItem46.Text = "Uн тн, кВ";
             this.layoutControlItem46.TextSize = new System.Drawing.Size(149, 13);
             // 
             // layoutControlItem47
@@ -1717,6 +1723,24 @@
             // VoltageTransformerErrorProvider
             // 
             this.VoltageTransformerErrorProvider.ContainerControl = this;
+            // 
+            // dUTextEdit
+            // 
+            this.dUTextEdit.Location = new System.Drawing.Point(164, 269);
+            this.dUTextEdit.Name = "dUTextEdit";
+            this.dUTextEdit.Properties.ReadOnly = true;
+            this.dUTextEdit.Size = new System.Drawing.Size(520, 20);
+            this.dUTextEdit.StyleController = this.TNControl;
+            this.dUTextEdit.TabIndex = 16;
+            // 
+            // layoutControlItem57
+            // 
+            this.layoutControlItem57.Control = this.dUTextEdit;
+            this.layoutControlItem57.Location = new System.Drawing.Point(0, 257);
+            this.layoutControlItem57.Name = "layoutControlItem57";
+            this.layoutControlItem57.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem57.Text = "Падение напряжения, %";
+            this.layoutControlItem57.TextSize = new System.Drawing.Size(149, 13);
             // 
             // CheckerForm
             // 
@@ -1855,6 +1879,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTransformerErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageTransformerErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dUTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1992,6 +2018,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem54;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem55;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem56;
+        private DevExpress.XtraEditors.TextEdit dUTextEdit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem57;
     }
 }
 

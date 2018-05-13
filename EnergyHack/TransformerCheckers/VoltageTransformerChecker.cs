@@ -100,12 +100,12 @@ namespace EnergyHack.TransformerCheckers
 
     internal class KloadTooSmallError : IError
     {
-        public string Description => "Необходимо добавить нагрузкочное сопротивление";
+        public string Description => "Необходимо добавить догрузочное сопротивление";
     }
 
     internal class DUError : IError
     {
-        public string Description => "Напряжение должно быть меньше предельного";
+        public string Description => "Напряжение больше допустимого";
     }
 
     internal class CompabilityError : IError
