@@ -603,7 +603,7 @@
             this.layoutControlItem28.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem28.Name = "layoutControlItem28";
             this.layoutControlItem28.Size = new System.Drawing.Size(331, 24);
-            this.layoutControlItem28.Text = "Kn, о.е.";
+            this.layoutControlItem28.Text = "Kn ном.пред.крат, о.е.";
             this.layoutControlItem28.TextSize = new System.Drawing.Size(142, 13);
             // 
             // layoutControlItem29
@@ -612,7 +612,7 @@
             this.layoutControlItem29.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem29.Name = "layoutControlItem29";
             this.layoutControlItem29.Size = new System.Drawing.Size(331, 24);
-            this.layoutControlItem29.Text = "Zn, Ом";
+            this.layoutControlItem29.Text = "Sn ном.втор.нагр, ВА";
             this.layoutControlItem29.TextSize = new System.Drawing.Size(142, 13);
             // 
             // layoutControlItem30
@@ -621,7 +621,7 @@
             this.layoutControlItem30.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem30.Name = "layoutControlItem30";
             this.layoutControlItem30.Size = new System.Drawing.Size(331, 24);
-            this.layoutControlItem30.Text = "Zr, Ом";
+            this.layoutControlItem30.Text = "Zr сопр.реле, Ом";
             this.layoutControlItem30.TextSize = new System.Drawing.Size(142, 13);
             // 
             // layoutControlItem31
@@ -630,7 +630,7 @@
             this.layoutControlItem31.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.Size = new System.Drawing.Size(331, 24);
-            this.layoutControlItem31.Text = "Iкз, А";
+            this.layoutControlItem31.Text = "Iкз ток КЗ, А";
             this.layoutControlItem31.TextSize = new System.Drawing.Size(142, 13);
             // 
             // layoutControlItem33
@@ -657,7 +657,7 @@
             this.layoutControlItem35.Location = new System.Drawing.Point(0, 221);
             this.layoutControlItem35.Name = "layoutControlItem35";
             this.layoutControlItem35.Size = new System.Drawing.Size(331, 24);
-            this.layoutControlItem35.Text = "Rk, Ом";
+            this.layoutControlItem35.Text = "Rk котактное сопр., Ом";
             this.layoutControlItem35.TextSize = new System.Drawing.Size(142, 13);
             // 
             // layoutControlItem36
@@ -930,7 +930,7 @@
             this.SaddLayoutItem.Location = new System.Drawing.Point(0, 197);
             this.SaddLayoutItem.Name = "SaddLayoutItem";
             this.SaddLayoutItem.Size = new System.Drawing.Size(333, 24);
-            this.SaddLayoutItem.Text = "Sadd, ВА";
+            this.SaddLayoutItem.Text = "Sadd догр.сопрю, ВА";
             this.SaddLayoutItem.TextSize = new System.Drawing.Size(145, 13);
             // 
             // layoutControlItem22
@@ -975,7 +975,7 @@
             this.RkLayoutItem.Location = new System.Drawing.Point(0, 149);
             this.RkLayoutItem.Name = "RkLayoutItem";
             this.RkLayoutItem.Size = new System.Drawing.Size(333, 24);
-            this.RkLayoutItem.Text = "Rк, Ом";
+            this.RkLayoutItem.Text = "Rk котактное сопр., Ом";
             this.RkLayoutItem.TextSize = new System.Drawing.Size(145, 13);
             // 
             // DefenceModeCheckEdit
@@ -1332,7 +1332,7 @@
             this.layoutControlItem43.Location = new System.Drawing.Point(451, 626);
             this.layoutControlItem43.Name = "layoutControlItem43";
             this.layoutControlItem43.Size = new System.Drawing.Size(225, 24);
-            this.layoutControlItem43.Text = "Расчетный ударный ток КЗ, кА";
+            this.layoutControlItem43.Text = "Время протекания тока, сек";
             this.layoutControlItem43.TextSize = new System.Drawing.Size(168, 13);
             // 
             // layoutControlItem44

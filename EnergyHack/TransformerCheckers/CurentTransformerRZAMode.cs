@@ -6,7 +6,8 @@ namespace EnergyHack.TransformerCheckers
     {
         public double? I1Nom { get; set; }
         public double? Kn { get; set; }
-        public double? Zn { get; set; }
+        public double? Zn => Sn / (I2Nom * I2Nom);
+        public double? Sn { get; set; }
         public double? Zr { get; set; }
         public double? Ikz { get; set; }
         public double? Rk { get; set; }

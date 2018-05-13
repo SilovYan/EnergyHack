@@ -86,7 +86,7 @@ namespace EnergyHack
             }
             else
             {
-                VoltRecomentRTextEdit.Text = "Всё ок";
+                VoltRecomentRTextEdit.Text = "Догрузочное сопротивление не требуется";
             }
 
             var bigError = errors?.FirstOrDefault(e => e is KloadTooBigError);
@@ -374,7 +374,7 @@ namespace EnergyHack
         {
             if (TryGetValue(RzaZnTextEdit, CurrentTransformerErrorProvider, out var value))
             {
-                _currentTransformerChecker.RzaPart.Zn = value;
+                _currentTransformerChecker.RzaPart.Sn = value;
             }
             _currentTransformerChecker.Validate();
         }
