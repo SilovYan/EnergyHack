@@ -322,7 +322,6 @@ namespace EnergyHack
         {
             var s2Nom = new[] { 0.5, 1, 2, 2.5, 3, 5, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100 };
             RzaS2NomComboBoxEdit.ClearAndFill(s2Nom);
-            RzaAccuracyClassTypeСomboBoxEdit.ClearAndFill(_typesToListsMap.Keys.ToList());
 
             UpdateVisibleRkAndSadd();
         }
@@ -446,6 +445,51 @@ namespace EnergyHack
             }
             value = default(double);
             return false;
+        }
+
+        private void RzaS2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RzaKnTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RzaZnTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RzaZrTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RzaIkzTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RzaCurrentTypeRadioGroup_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RzaCurrentLengthTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RZAsComboBoxEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RzaRkTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
