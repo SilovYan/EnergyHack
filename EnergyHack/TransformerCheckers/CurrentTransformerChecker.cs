@@ -83,6 +83,7 @@ namespace EnergyHack.TransformerCheckers
             Validate(errors, ValidateI);
             Validate(errors, ValidateK);
             Validate(errors, ValidateKSecurity);
+            Validate(errors, ValidateRza);
 
             if (_errors.Equal(errors)) return;
 
@@ -123,6 +124,15 @@ namespace EnergyHack.TransformerCheckers
                    AccountingPart.HasKSecurity &&
                    AccountingPart.KSecurity > AccountingPart.KSecurityEquipment
                 ? new KSecurityError()
+                : null;
+        }
+
+        private IError ValidateRza()
+        {
+            return RzaPart?.K10 != null &&
+                   RzaPart?.K10dop != null &&
+                   RzaPart.K10dop < RzaPart.K10
+                ? new RzaError()
                 : null;
         }
     }

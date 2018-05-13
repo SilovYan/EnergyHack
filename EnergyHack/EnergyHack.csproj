@@ -75,6 +75,7 @@
     <Compile Include="TransformerCheckers\CurrentTransformerChecker.cs" />
     <Compile Include="TransformerCheckers\CurrentTransformerModeBase.cs" />
     <Compile Include="TransformerCheckers\ITransformerChecker.cs" />
+    <Compile Include="TransformerCheckers\RzaError.cs" />
     <Compile Include="Validators\Errors\KError.cs" />
     <Compile Include="Validators\Errors\KSecurityError.cs" />
     <Compile Include="Validators\Errors\SectionError.cs" />
