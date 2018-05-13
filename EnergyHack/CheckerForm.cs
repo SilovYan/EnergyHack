@@ -82,12 +82,17 @@ namespace EnergyHack
             {
                 CurrentTransformerErrorProvider.SetError(sComboBoxEdit, sectionError.Description);
             }
-
-
+            
             var kSecurityError = errors?.FirstOrDefault(e => e is KSecurityError);
             if (kSecurityError != null)
             {
                 CurrentTransformerErrorProvider.SetError(kSecurityEquipmentTextEdit, kSecurityError.Description);
+            }
+
+            var rzaError = errors?.FirstOrDefault(e => e is RzaError);
+            if (rzaError != null)
+            {
+                CurrentTransformerErrorProvider.SetError(RZAsComboBoxEdit, rzaError.Description);
             }
         }
 
@@ -143,7 +148,7 @@ namespace EnergyHack
         private void DefenceModeCheckEdit_CheckedChanged(object sender, EventArgs e)
         {
             DefenceModeLayout.Enabled = DefenceModeCheckEdit.Checked;
-            if (AccountingModeCheckEdit.Checked)
+            if (DefenceModeCheckEdit.Checked)
             {
                 _currentTransformerChecker.RzaPart = new CurentTransformerRzaMode();
                 // TODO: магия =)
@@ -153,7 +158,7 @@ namespace EnergyHack
             }
             else
             {
-                _currentTransformerChecker.AccountingPart = null;
+                _currentTransformerChecker.RzaPart = null;
                 ClearRzaPart();
             }
         }
@@ -285,6 +290,91 @@ namespace EnergyHack
             DefenceModeLayout.Enabled = DefenceModeCheckEdit.Checked;
         }
 
+        private void RzaS2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RzaS2NomComboBoxEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.RzaPart.S2Nom = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void RzaKnTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RzaKnTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.RzaPart.Kn = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void RzaZnTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RzaZnTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.RzaPart.Zn = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void RzaZrTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RzaZrTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.RzaPart.Zr = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void RzaIkzTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RzaIkzTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.RzaPart.Ikz = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void RzaCurrentTypeRadioGroup_EditValueChanged(object sender, EventArgs e)
+        {
+            var index = (byte)RzaCurrentTypeRadioGroup.SelectedIndex;
+            if (index == 0)
+                _currentTransformerChecker.RzaPart.CurrentType =
+                    CurrentType.Aluminium;
+            if (index == 1)
+                _currentTransformerChecker.RzaPart.CurrentType =
+                    CurrentType.Copper;
+            FillRzaCurrentS(index);
+            _currentTransformerChecker.Validate();
+        }
+
+        private void RzaCurrentLengthTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RzaCurrentLengthTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.RzaPart.CurrentLength = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void RZAsComboBoxEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RZAsComboBoxEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.RzaPart.CurrentS = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void RzaRkTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(RzaRkTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.RzaPart.Rk = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
         #endregion
 
         #region Fillers
@@ -322,8 +412,7 @@ namespace EnergyHack
         {
             var s2Nom = new[] { 0.5, 1, 2, 2.5, 3, 5, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100 };
             RzaS2NomComboBoxEdit.ClearAndFill(s2Nom);
-
-            UpdateVisibleRkAndSadd();
+            UpdateRzaPartOfModel();
         }
 
         private void UpdateVisibleRkAndSadd()
@@ -351,8 +440,7 @@ namespace EnergyHack
             SaddLayoutItem.Visibility = SaddVisible ? LayoutVisibility.Always : LayoutVisibility.Never;
             _currentTransformerChecker.Validate();
         }
-
-
+        
         private void UpdateVisibleKSecurity()
         {
             var visibility = _currentTransformerChecker.AccountingPart.HasKSecurity
@@ -422,6 +510,19 @@ namespace EnergyHack
             kSecurityEquipmentTextEdit_EditValueChanged(null, null);
         }
 
+        private void UpdateRzaPartOfModel()
+        {
+            RzaS2NomComboBoxEdit_SelectedIndexChanged(null,null);
+            RzaKnTextEdit_EditValueChanged(null,null);
+            RzaZnTextEdit_EditValueChanged(null,null);
+            RzaZrTextEdit_EditValueChanged(null,null);
+            RzaIkzTextEdit_EditValueChanged(null,null);
+            RzaCurrentTypeRadioGroup_EditValueChanged(null,null);
+            RzaCurrentLengthTextEdit_EditValueChanged(null,null);
+            RZAsComboBoxEdit_EditValueChanged(null,null);
+            RzaRkTextEdit_EditValueChanged(null,null);
+        }
+
         #endregion
 
         private void ValidateCurrentTransformerControls()
@@ -429,12 +530,21 @@ namespace EnergyHack
             foreach (var control in _controlsForValidate)
                 TryGetValue(control, CurrentTransformerErrorProvider, out _);
 
-            if (_currentTransformerChecker.AccountingPart == null) return;
-
-            TryGetValue(SaddTextEdit, CurrentTransformerErrorProvider, out _);
-            TryGetValue(RkTextEdit, CurrentTransformerErrorProvider, out _);
-            TryGetValue(CurrentLengthTextEdit, CurrentTransformerErrorProvider, out _);
-            TryGetValue(SprTextEdit, CurrentTransformerErrorProvider, out _);
+            if (_currentTransformerChecker.AccountingPart != null)
+            {
+                TryGetValue(SaddTextEdit, CurrentTransformerErrorProvider, out _);
+                TryGetValue(RkTextEdit, CurrentTransformerErrorProvider, out _);
+                TryGetValue(CurrentLengthTextEdit, CurrentTransformerErrorProvider, out _);
+                TryGetValue(SprTextEdit, CurrentTransformerErrorProvider, out _);
+            }
+            if (_currentTransformerChecker.RzaPart != null)
+            {
+                TryGetValue(RzaKnTextEdit, CurrentTransformerErrorProvider, out _);
+                TryGetValue(RzaZnTextEdit, CurrentTransformerErrorProvider, out _);
+                TryGetValue(RzaZrTextEdit, CurrentTransformerErrorProvider, out _);
+                TryGetValue(RzaCurrentLengthTextEdit, CurrentTransformerErrorProvider, out _);
+                TryGetValue(RzaIkzTextEdit, CurrentTransformerErrorProvider, out _);
+            }
         }
         
         private static bool TryGetValue(Control control, DXErrorProvider provider, out double value)
@@ -451,82 +561,6 @@ namespace EnergyHack
             }
             value = default(double);
             return false;
-        }
-
-        private void RzaS2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(RzaS2NomComboBoxEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.RzaPart.S2Nom = value;
-            }
-        }
-
-        private void RzaKnTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(RzaKnTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.RzaPart.Kn = value;
-            }
-        }
-
-        private void RzaZnTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(RzaZnTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.RzaPart.Zn = value;
-            }
-        }
-
-        private void RzaZrTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(RzaZrTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.RzaPart.Zr = value;
-            }
-        }
-
-        private void RzaIkzTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(RzaIkzTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.RzaPart.Ikz = value;
-            }
-        }
-
-        private void RzaCurrentTypeRadioGroup_EditValueChanged(object sender, EventArgs e)
-        {
-            var index = (byte)RzaCurrentTypeRadioGroup.SelectedIndex;
-            if (index == 0)
-                _currentTransformerChecker.RzaPart.CurrentType =
-                    CurrentType.Aluminium;
-            if (index == 1)
-                _currentTransformerChecker.RzaPart.CurrentType =
-                    CurrentType.Copper;
-            FillRzaCurrentS(index);
-        }
-        
-        private void RzaCurrentLengthTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(RzaCurrentLengthTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.RzaPart.CurrentLength = value;
-            }
-        }
-
-        private void RZAsComboBoxEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(RZAsComboBoxEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.RzaPart.CurrentS = value;
-            }
-        }
-
-        private void RzaRkTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(RzaRkTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.RzaPart.Rk = value;
-            }
         }
     }
 }
