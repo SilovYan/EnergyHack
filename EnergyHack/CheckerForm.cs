@@ -94,6 +94,18 @@ namespace EnergyHack
             {
                 CurrentTransformerErrorProvider.SetError(RZAsComboBoxEdit, rzaError.Description);
             }
+
+            var ismallError = errors?.FirstOrDefault(e => e is IsmallError);
+            if (ismallError != null)
+            {
+                CurrentTransformerErrorProvider.SetError(iуTextEdit, ismallError.Description);
+            }
+
+            var bkError = errors?.FirstOrDefault(e => e is BkError);
+            if (bkError != null)
+            {
+                CurrentTransformerErrorProvider.SetError(BkTextEdit, bkError.Description);
+            }
         }
 
         private void IRabMaxComboBoxEdit_TextChanged(object sender, EventArgs e)
@@ -545,6 +557,11 @@ namespace EnergyHack
                 TryGetValue(RzaCurrentLengthTextEdit, CurrentTransformerErrorProvider, out _);
                 TryGetValue(RzaIkzTextEdit, CurrentTransformerErrorProvider, out _);
             }
+            TryGetValue(iуTextEdit, CurrentTransformerErrorProvider, out _);
+            TryGetValue(iprsTextEdit, CurrentTransformerErrorProvider, out _);
+            TryGetValue(BkTextEdit, CurrentTransformerErrorProvider, out _);
+            TryGetValue(IterTextEdit, CurrentTransformerErrorProvider, out _);
+            TryGetValue(TterTextEdit, CurrentTransformerErrorProvider, out _);
         }
         
         private static bool TryGetValue(Control control, DXErrorProvider provider, out double value)
