@@ -15,7 +15,7 @@ namespace EnergyHack
     {
         private const string Comercial = "Для коммерческого учета";
         private const string Technical = "Для технического учета";
-        private const string Indicating = "Для указывающих амперметров";
+        private const string Indicating = "Для измерений";
         private readonly ICollection<Control> _controlsForValidate;
         private readonly CurrentTransformerChecker _currentTransformerChecker;
         private VoltageTransformerChecker _voltageTransformerChecker = new VoltageTransformerChecker();
@@ -46,8 +46,8 @@ namespace EnergyHack
             _typesToListsMap.TryAdd(Technical, new[] { "0.1", "0.2", "0.5", "1" });
             _typesToListsMap.TryAdd(Indicating, new[] { "0.1", "0.2", "0.5", "1", "3" });
 
-            _currentMap.TryAdd(0, new[] {1, 1.5, 2.5, 4, 6, 10});
-            _currentMap.TryAdd(1, new[] {2.5, 4, 6, 10});
+            _currentMap.TryAdd(0, new[] {1, 1.5, 2.5, 4, 6});
+            _currentMap.TryAdd(1, new[] {2.5, 4, 6});
             UpdateBaseModelAfterInitialize();
         }
 
@@ -74,7 +74,7 @@ namespace EnergyHack
             var kError = errors?.FirstOrDefault(e => e is KError);
             if (kError != null)
             {
-                CurrentTransformerErrorProvider.SetError(RkTextEdit, kError.Description);
+                CurrentTransformerErrorProvider.SetError(SaddTextEdit, kError.Description);
             }
 
             var sectionError = errors?.FirstOrDefault(e => e is SectionError);
@@ -247,6 +247,7 @@ namespace EnergyHack
             {
                 _currentTransformerChecker.AccountingPart.Rk = value;
             }
+            _currentTransformerChecker.Validate();
         }
 
         private void SaddTextEdit_EditValueChanged(object sender, EventArgs e)
@@ -387,6 +388,53 @@ namespace EnergyHack
             _currentTransformerChecker.Validate();
         }
 
+        private void iуTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(iуTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.Iy = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void iprsTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(iprsTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.Iprs = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void BkTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(BkTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.Bk = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void IterTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+            if (TryGetValue(IterTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.Iter = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void TterTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+            if (TryGetValue(TterTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.TTer = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
         #endregion
 
         #region Fillers
@@ -429,7 +477,6 @@ namespace EnergyHack
 
         private void UpdateVisibleRkAndSadd()
         {
-            var RkVisible = _currentTransformerChecker.AccountingPart?.RkVisible ?? false;
             var SaddVisible = _currentTransformerChecker.AccountingPart?.SaddVisible ?? false;
 
             if (SaddVisible && !SaddLayoutItem.Visible)
@@ -444,11 +491,9 @@ namespace EnergyHack
                 if (_currentTransformerChecker.AccountingPart != null)
                 {
                     _currentTransformerChecker.AccountingPart.Sadd = 0;
-                    _currentTransformerChecker.AccountingPart.Rk = 0;
                 }
             }
 
-            RkLayoutItem.Visibility = RkVisible ? LayoutVisibility.Always : LayoutVisibility.Never;
             SaddLayoutItem.Visibility = SaddVisible ? LayoutVisibility.Always : LayoutVisibility.Never;
             _currentTransformerChecker.Validate();
         }
@@ -580,51 +625,5 @@ namespace EnergyHack
             return false;
         }
 
-        private void iуTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(iуTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.Iy = value;
-            }
-            _currentTransformerChecker.Validate();
-        }
-
-        private void iprsTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(iprsTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.Iprs = value;
-            }
-            _currentTransformerChecker.Validate();
-        }
-
-        private void BkTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            if (TryGetValue(BkTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.Bk = value;
-            }
-            _currentTransformerChecker.Validate();
-        }
-
-        private void IterTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-
-            if (TryGetValue(IterTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.Iter = value;
-            }
-            _currentTransformerChecker.Validate();
-        }
-
-        private void TterTextEdit_EditValueChanged(object sender, EventArgs e)
-        {
-
-            if (TryGetValue(TterTextEdit, CurrentTransformerErrorProvider, out var value))
-            {
-                _currentTransformerChecker.TTer = value;
-            }
-            _currentTransformerChecker.Validate();
-        }
     }
 }

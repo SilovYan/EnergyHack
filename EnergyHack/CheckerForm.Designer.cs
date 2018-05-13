@@ -602,7 +602,7 @@
             // 
             // SprTextEdit
             // 
-            this.SprTextEdit.Location = new System.Drawing.Point(151, 152);
+            this.SprTextEdit.Location = new System.Drawing.Point(151, 176);
             this.SprTextEdit.Name = "SprTextEdit";
             this.SprTextEdit.Size = new System.Drawing.Size(181, 20);
             this.SprTextEdit.StyleController = this.AccountingModeControl;
@@ -611,7 +611,7 @@
             // 
             // SaddTextEdit
             // 
-            this.SaddTextEdit.Location = new System.Drawing.Point(151, 176);
+            this.SaddTextEdit.Location = new System.Drawing.Point(151, 200);
             this.SaddTextEdit.Name = "SaddTextEdit";
             this.SaddTextEdit.Size = new System.Drawing.Size(181, 20);
             this.SaddTextEdit.StyleController = this.AccountingModeControl;
@@ -620,7 +620,8 @@
             // 
             // RkTextEdit
             // 
-            this.RkTextEdit.Location = new System.Drawing.Point(151, 200);
+            this.RkTextEdit.EditValue = "0";
+            this.RkTextEdit.Location = new System.Drawing.Point(151, 152);
             this.RkTextEdit.Name = "RkTextEdit";
             this.RkTextEdit.Size = new System.Drawing.Size(181, 20);
             this.RkTextEdit.StyleController = this.AccountingModeControl;
@@ -709,13 +710,13 @@
             this.layoutControlItem18,
             this.layoutControlItem19,
             this.layoutControlItem20,
-            this.RkLayoutItem,
             this.layoutControlItem21,
             this.SaddLayoutItem,
             this.layoutControlItem22,
             this.layoutControlItem23,
             this.layoutControlItem24,
-            this.layoutControlItem25});
+            this.layoutControlItem25,
+            this.RkLayoutItem});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.Root.Size = new System.Drawing.Size(335, 322);
@@ -786,7 +787,7 @@
             // RkLayoutItem
             // 
             this.RkLayoutItem.Control = this.RkTextEdit;
-            this.RkLayoutItem.Location = new System.Drawing.Point(0, 197);
+            this.RkLayoutItem.Location = new System.Drawing.Point(0, 149);
             this.RkLayoutItem.Name = "RkLayoutItem";
             this.RkLayoutItem.Size = new System.Drawing.Size(333, 24);
             this.RkLayoutItem.Text = "Rк, Ом";
@@ -795,16 +796,16 @@
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.SprTextEdit;
-            this.layoutControlItem21.Location = new System.Drawing.Point(0, 149);
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 173);
             this.layoutControlItem21.Name = "layoutControlItem21";
             this.layoutControlItem21.Size = new System.Drawing.Size(333, 24);
-            this.layoutControlItem21.Text = "S проводниика, ВА";
+            this.layoutControlItem21.Text = "S прибора, ВА";
             this.layoutControlItem21.TextSize = new System.Drawing.Size(145, 13);
             // 
             // SaddLayoutItem
             // 
             this.SaddLayoutItem.Control = this.SaddTextEdit;
-            this.SaddLayoutItem.Location = new System.Drawing.Point(0, 173);
+            this.SaddLayoutItem.Location = new System.Drawing.Point(0, 197);
             this.SaddLayoutItem.Name = "SaddLayoutItem";
             this.SaddLayoutItem.Size = new System.Drawing.Size(333, 24);
             this.SaddLayoutItem.Text = "Sadd, ВА";
@@ -1019,7 +1020,7 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 17);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(339, 24);
-            this.layoutControlItem5.Text = "Uном.тт, В";
+            this.layoutControlItem5.Text = "Uном.тт, кВ";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(168, 13);
             // 
             // layoutControlItem2
@@ -1028,7 +1029,7 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(339, 17);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(337, 24);
-            this.layoutControlItem2.Text = "Uном.сети, В";
+            this.layoutControlItem2.Text = "Uном.сети, кВ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(168, 13);
             // 
             // layoutControlItem3
@@ -1134,7 +1135,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.TNControl);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(684, 565);
+            this.xtraTabPage2.Size = new System.Drawing.Size(696, 689);
             this.xtraTabPage2.Text = "Трансформатор напряжения";
             // 
             // TNControl
@@ -1143,7 +1144,7 @@
             this.TNControl.Location = new System.Drawing.Point(0, 0);
             this.TNControl.Name = "TNControl";
             this.TNControl.Root = this.layoutControlGroup2;
-            this.TNControl.Size = new System.Drawing.Size(684, 565);
+            this.TNControl.Size = new System.Drawing.Size(696, 689);
             this.TNControl.TabIndex = 0;
             this.TNControl.Text = "layoutControl2";
             // 

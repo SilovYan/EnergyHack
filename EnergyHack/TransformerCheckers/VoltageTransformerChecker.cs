@@ -9,9 +9,15 @@ namespace EnergyHack.TransformerCheckers
     {
         public event ErrorsChangedHandler ErrorsChanged;
 
+        public double? UnTT { get; set; }
+        public double? UnNetwork { get; set; }
+        public double? S2Nom { get; set; }
+        public double? Stn { get; set; }
+
+
         public void Validate()
         {
-            throw new System.NotImplementedException();
+            ErrorsChanged?.Invoke(this,null);
         }
     }
 }

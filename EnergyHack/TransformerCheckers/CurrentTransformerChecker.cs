@@ -133,7 +133,7 @@ namespace EnergyHack.TransformerCheckers
                 return null;
             if (AccountingPart.K > 1)
                 return new SectionError();
-            return AccountingPart.RkVisible ? new KError() : null;
+            return new KError();
         }
 
         private IError ValidateKSecurity()
