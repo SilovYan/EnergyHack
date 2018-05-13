@@ -101,12 +101,12 @@ namespace EnergyHack.TransformerCheckers
 
         private IError ValidateBk()
         {
-            return Iy > Iprs ? new BkError() : null;
+            return Bk > TTer * Iter * Iter ? new BkError() : null;
         }
 
         private IError ValidateIsmall()
         {
-            return Bk > TTer * Iter*Iter ? new IsmallError() : null;
+            return Iy > Iprs ? new IsmallError() : null;
         }
 
 
