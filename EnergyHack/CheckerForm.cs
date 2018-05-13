@@ -143,6 +143,19 @@ namespace EnergyHack
         private void DefenceModeCheckEdit_CheckedChanged(object sender, EventArgs e)
         {
             DefenceModeLayout.Enabled = DefenceModeCheckEdit.Checked;
+            if (AccountingModeCheckEdit.Checked)
+            {
+                _currentTransformerChecker.RzaPart = new CurentTransformerRzaMode();
+                // TODO: магия =)
+                _currentTransformerChecker.I1nom = _currentTransformerChecker.I1nom;
+                _currentTransformerChecker.I2Nom = _currentTransformerChecker.I2Nom;
+                FillRzaPart();
+            }
+            else
+            {
+                _currentTransformerChecker.AccountingPart = null;
+                ClearRzaPart();
+            }
         }
 
         private void I2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
@@ -305,6 +318,15 @@ namespace EnergyHack
             UpdateVisibleRkAndSadd();
         }
 
+        private void FillRzaPart()
+        {
+            var s2Nom = new[] { 0.5, 1, 2, 2.5, 3, 5, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100 };
+            RzaS2NomComboBoxEdit.ClearAndFill(s2Nom);
+            RzaAccuracyClassTypeСomboBoxEdit.ClearAndFill(_typesToListsMap.Keys.ToList());
+
+            UpdateVisibleRkAndSadd();
+        }
+
         private void UpdateVisibleRkAndSadd()
         {
             var RkVisible = _currentTransformerChecker.AccountingPart?.RkVisible ?? false;
@@ -356,7 +378,11 @@ namespace EnergyHack
         {
             // TODO: не совсем понятно что тут делать
         }
-        
+        private void ClearRzaPart()
+        {
+            // TODO: не совсем понятно что тут делать
+        }
+
         private void FillCurrentS(byte selectedIndex)
         {
             if(_currentMap.ContainsKey(selectedIndex))
