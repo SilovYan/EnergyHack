@@ -1562,6 +1562,9 @@
             this.VoltDestinitionComboBoxEdit.Name = "VoltDestinitionComboBoxEdit";
             this.VoltDestinitionComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VoltDestinitionComboBoxEdit.Properties.Items.AddRange(new object[] {
+            "Для измерений",
+            "Для защиты"});
             this.VoltDestinitionComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.VoltDestinitionComboBoxEdit.Size = new System.Drawing.Size(520, 20);
             this.VoltDestinitionComboBoxEdit.StyleController = this.TNControl;

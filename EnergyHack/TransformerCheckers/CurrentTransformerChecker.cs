@@ -4,9 +4,9 @@ using EnergyHack.Validators.Errors;
 
 namespace EnergyHack.TransformerCheckers
 {
+    public delegate IError Validator();
     public class CurrentTransformerChecker : ITransformerChecker
     {
-        private delegate IError Validator();
         private double? _UNomTT;
         private double? _UNetwork;
 

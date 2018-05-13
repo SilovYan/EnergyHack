@@ -22,6 +22,7 @@ namespace EnergyHack
 
         private readonly ConcurrentDictionary<string, string[]> _typesToListsMap = new ConcurrentDictionary<string, string[]>();
         private readonly ConcurrentDictionary<byte, double[]> _currentMap = new ConcurrentDictionary<byte, double[]>();
+        private readonly ConcurrentDictionary<string, double> _voltageDestMap = new ConcurrentDictionary<string, double>();
 
         public CheckerForm(CurrentTransformerChecker currentTransformerChecker)
         {
@@ -48,6 +49,13 @@ namespace EnergyHack
 
             _currentMap.TryAdd(0, new[] {1, 1.5, 2.5, 4, 6});
             _currentMap.TryAdd(1, new[] {2.5, 4, 6});
+
+            _voltageDestMap.TryAdd("расчетные счетчики и измерительные преобразователи", 0.5);
+            _voltageDestMap.TryAdd("расчетные счетчики межсистемных линий", 0.25);
+            _voltageDestMap.TryAdd("счетчики технического учета", 1.5);
+            _voltageDestMap.TryAdd("измерения", 1.5);
+            _voltageDestMap.TryAdd("защита", 3);
+
             UpdateBaseModelAfterInitialize();
         }
 
@@ -627,37 +635,62 @@ namespace EnergyHack
 
         private void VoltUnTTComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (TryGetValue(VoltUnTTComboBoxEdit, VoltageTransformerErrorProvider, out var value))
+            {
+                _voltageTransformerChecker.UnTT = value;
+            }
+            _voltageTransformerChecker.Validate();
         }
 
         private void VoltUnNetworkComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (TryGetValue(VoltUnNetworkComboBoxEdit, VoltageTransformerErrorProvider, out var value))
+            {
+                _voltageTransformerChecker.UnNetwork = value;
+            }
+            _voltageTransformerChecker.Validate();
         }
 
         private void VoltS2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (TryGetValue(VoltS2NomComboBoxEdit, VoltageTransformerErrorProvider, out var value))
+            {
+                _voltageTransformerChecker.S2Nom = value;
+            }
+            _voltageTransformerChecker.Validate();
         }
 
         private void VoltDestinitionComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (VoltDestinitionComboBoxEdit.Text == "Для измерений")
+            {
+                VoltAccuracyClassComboBoxEdit.Properties.Items.AddRange(new[]{ 0.1, 0.2, 0.5, 1.0, 3.0 });
+            }
+            else
+            {
+                VoltAccuracyClassComboBoxEdit.Properties.Items.AddRange(new[] { "3Р", "6Р" });
+            }
         }
 
         private void VoltAccuracyClassComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            // TODO: ну и молодцы, что выбрали. Нам на это похер
         }
 
         private void VoltAimComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
+            _voltageTransformerChecker.DUlim = _voltageDestMap[VoltAimComboBoxEdit.SelectedItem.ToString()];
 
+            _voltageTransformerChecker.Validate();
         }
 
         private void VoltMaxSTextEdit_EditValueChanged(object sender, EventArgs e)
         {
-
+            if (TryGetValue(VoltMaxSTextEdit, VoltageTransformerErrorProvider, out var value))
+            {
+                _voltageTransformerChecker.Stn = value;
+            }
+            _voltageTransformerChecker.Validate();
         }
 
         private void VoltRecomentRTextEdit_EditValueChanged(object sender, EventArgs e)
@@ -667,12 +700,20 @@ namespace EnergyHack
 
         private void VoltCurrentLengthTextEdit_EditValueChanged(object sender, EventArgs e)
         {
-
+            if (TryGetValue(VoltCurrentLengthTextEdit, VoltageTransformerErrorProvider, out var value))
+            {
+                _voltageTransformerChecker.CurrentLength = value;
+            }
+            _voltageTransformerChecker.Validate();
         }
 
         private void VoltsCurrentTextEdit_EditValueChanged(object sender, EventArgs e)
         {
-
+            if (TryGetValue(VoltsCurrentTextEdit, VoltageTransformerErrorProvider, out var value))
+            {
+                _voltageTransformerChecker.CurrentS = value;
+            }
+            _voltageTransformerChecker.Validate();
         }
     }
 }
