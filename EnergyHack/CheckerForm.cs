@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.DXErrorProvider;
-using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.Utils;
 using EnergyHack.TransformerCheckers;
 using EnergyHack.Validators.Errors;
@@ -18,7 +17,7 @@ namespace EnergyHack
         private const string Indicating = "Для измерений";
         private readonly ICollection<Control> _controlsForValidate;
         private readonly CurrentTransformerChecker _currentTransformerChecker;
-        private VoltageTransformerChecker _voltageTransformerChecker = new VoltageTransformerChecker();
+        private readonly VoltageTransformerChecker _voltageTransformerChecker = new VoltageTransformerChecker();
 
         private readonly ConcurrentDictionary<string, string[]> _typesToListsMap = new ConcurrentDictionary<string, string[]>();
         private readonly ConcurrentDictionary<byte, double[]> _currentMap = new ConcurrentDictionary<byte, double[]>();
@@ -36,6 +35,7 @@ namespace EnergyHack
             I1NomComboBoxEdit.SelectedIndexChanged += I1NomComboBoxEdit_SelectedIndexChanged;
             IRabMaxComboBoxEdit.TextChanged += IRabMaxComboBoxEdit_TextChanged;
             _currentTransformerChecker.ErrorsChanged += _currentTransformerChecker_ErrorsChanged;
+            _voltageTransformerChecker.ErrorsChanged += _voltageTransformerChecker_ErrorsChanged;
             _controlsForValidate = new List<Control>
             {
                 IRabMaxComboBoxEdit,
@@ -56,10 +56,45 @@ namespace EnergyHack
             _voltageDestMap.TryAdd("измерения", 1.5);
             _voltageDestMap.TryAdd("защита", 3);
 
+            VoltAimComboBoxEdit.Properties.Items.AddRange(_voltageDestMap.Keys.ToList());
+
             UpdateBaseModelAfterInitialize();
         }
 
+
         #region Changed
+
+        private void _voltageTransformerChecker_ErrorsChanged(object sender, ICollection<IError> errors)
+        {
+            VoltageTransformerErrorProvider.ClearErrors();
+
+            ValidateVoltageTransformerControls();
+
+            var duError = errors?.FirstOrDefault(e => e is DUError);
+            if (duError != null)
+            {
+                VoltageTransformerErrorProvider.SetError(VoltMaxSTextEdit, duError.Description);
+            }
+
+            var smallError = errors?.FirstOrDefault(e => e is KloadTooSmallError);
+            if (smallError != null)
+            {
+                VoltRecomentRTextEdit.Text = _voltageTransformerChecker.Radd.ToString();
+                VoltageTransformerErrorProvider.SetError(VoltRecomentRTextEdit, smallError.Description, ErrorType.Information);
+            }
+
+            var bigError = errors?.FirstOrDefault(e => e is KloadTooBigError);
+            if (bigError != null)
+            {
+                VoltageTransformerErrorProvider.SetError(VoltMaxSTextEdit, bigError.Description);
+            }
+
+            var compabilityError = errors?.FirstOrDefault(e => e is CompabilityError);
+            if (compabilityError != null)
+            {
+                VoltageTransformerErrorProvider.SetError(VoltUnTTComboBoxEdit, compabilityError.Description);
+            }
+        }
 
         private void _currentTransformerChecker_ErrorsChanged(object sender, ICollection<IError> errors)
         {
@@ -616,7 +651,13 @@ namespace EnergyHack
             TryGetValue(IterTextEdit, CurrentTransformerErrorProvider, out _);
             TryGetValue(TterTextEdit, CurrentTransformerErrorProvider, out _);
         }
-        
+
+        private void ValidateVoltageTransformerControls()
+        {
+            TryGetValue(VoltMaxSTextEdit, VoltageTransformerErrorProvider, out _);
+            TryGetValue(VoltCurrentLengthTextEdit, VoltageTransformerErrorProvider, out _);
+        }
+
         private static bool TryGetValue(Control control, DXErrorProvider provider, out double value)
         {
             provider.SetError(control, null);
