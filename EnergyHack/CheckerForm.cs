@@ -3,7 +3,6 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraLayout;
 using DevExpress.XtraLayout.Utils;
@@ -18,16 +17,15 @@ namespace EnergyHack
         private const string Technical = "Для технического учета";
         private const string Indicating = "Для указывающих амперметров";
         private readonly ICollection<Control> _controlsForValidate;
-        private readonly CurrentTransformerChecker _currentTransformerChecker = new CurrentTransformerChecker();
+        private readonly CurrentTransformerChecker _currentTransformerChecker;
         private VoltageTransformerChecker _voltageTransformerChecker = new VoltageTransformerChecker();
 
         private readonly ConcurrentDictionary<string, string[]> _typesToListsMap = new ConcurrentDictionary<string, string[]>();
         private readonly ConcurrentDictionary<byte, double[]> _currentMap = new ConcurrentDictionary<byte, double[]>();
 
-        public ILayoutControl Current => TTControl;
-        public ILayoutControl Voltage => TNControl;
-        public CheckerForm()
+        public CheckerForm(CurrentTransformerChecker currentTransformerChecker)
         {
+            _currentTransformerChecker = currentTransformerChecker;
             InitializeComponent();
             Fill();
 
@@ -37,17 +35,12 @@ namespace EnergyHack
             I1NomComboBoxEdit.SelectedIndexChanged += I1NomComboBoxEdit_SelectedIndexChanged;
             IRabMaxComboBoxEdit.TextChanged += IRabMaxComboBoxEdit_TextChanged;
             _currentTransformerChecker.ErrorsChanged += _currentTransformerChecker_ErrorsChanged;
-
             _controlsForValidate = new List<Control>
             {
                 IRabMaxComboBoxEdit,
                 I1NomComboBoxEdit,
                 UNomTTComboBoxEdit,
                 UNomNetworkComboBoxEdit,
-                CurrentLengthTextEdit,
-                SprTextEdit,
-                SaddTextEdit,
-                RkTextEdit
             };
             _typesToListsMap.TryAdd(Comercial, new[] { "0.2S", "0.5S" });
             _typesToListsMap.TryAdd(Technical, new[] { "0.1", "0.2", "0.5", "1" });
@@ -55,6 +48,7 @@ namespace EnergyHack
 
             _currentMap.TryAdd(0, new[] {1, 1.5, 2.5, 4, 6, 10});
             _currentMap.TryAdd(1, new[] {2.5, 4, 6, 10});
+            UpdateBaseModelAfterInitialize();
         }
 
         #region Changed
@@ -87,6 +81,13 @@ namespace EnergyHack
             if (sectionError != null)
             {
                 CurrentTransformerErrorProvider.SetError(sComboBoxEdit, sectionError.Description);
+            }
+
+
+            var kSecurityError = errors?.FirstOrDefault(e => e is KSecurityError);
+            if (kSecurityError != null)
+            {
+                CurrentTransformerErrorProvider.SetError(kSecurityEquipmentTextEdit, kSecurityError.Description);
             }
         }
 
@@ -128,6 +129,8 @@ namespace EnergyHack
             if (AccountingModeCheckEdit.Checked)
             {
                 _currentTransformerChecker.AccountingPart = new CurrentTransformerAccountingMode();
+                // TODO: магия =)
+                _currentTransformerChecker.I2Nom = _currentTransformerChecker.I2Nom;
                 FillAccountingPart();
             }
             else
@@ -154,26 +157,30 @@ namespace EnergyHack
         private void AccuracyClassTypeСomboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
             // TODO: тут не всё так просто
-            var selected = AccuracyClassTypeСomboBoxEdit.SelectedItem.ToString();
-            FillAccuracy(selected);
-            switch (selected)
+            var selected = AccuracyClassTypeСomboBoxEdit.SelectedItem?.ToString();
+            if (selected != null)
             {
-                case Comercial:
-                    _currentTransformerChecker.AccountingPart.AccuracyClass = AccuracyClass.Comercial;
-                    break;
-                case Technical:
-                    _currentTransformerChecker.AccountingPart.AccuracyClass = AccuracyClass.Technical;
-                    break;
-                case Indicating:
-                    _currentTransformerChecker.AccountingPart.AccuracyClass = AccuracyClass.Indicating;
-                    break;
+                FillAccuracy(selected);
+                switch (selected)
+                {
+                    case Comercial:
+                        _currentTransformerChecker.AccountingPart.AccuracyClass = AccuracyClass.Comercial;
+                        break;
+                    case Technical:
+                        _currentTransformerChecker.AccountingPart.AccuracyClass = AccuracyClass.Technical;
+                        break;
+                    case Indicating:
+                        _currentTransformerChecker.AccountingPart.AccuracyClass = AccuracyClass.Indicating;
+                        break;
+                }
             }
             UpdateVisibleRkAndSadd();
+            UpdateVisibleKSecurity();
         }
 
         private void AccuracyClassComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _currentTransformerChecker.AccountingPart.Accuracy = AccuracyClassComboBoxEdit.SelectedItem.ToString();
+            _currentTransformerChecker.AccountingPart.Accuracy = AccuracyClassComboBoxEdit.SelectedItem?.ToString();
             UpdateVisibleRkAndSadd();
         }
 
@@ -223,8 +230,12 @@ namespace EnergyHack
         private void CurrentTypeRadioGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
             var index = (byte) CurrentTypeRadioGroup.SelectedIndex;
-            _currentTransformerChecker.AccountingPart.CurrentType =
-                index == 0 ? CurrentType.Aluminium : CurrentType.Copper;
+            if (index == 0)
+                _currentTransformerChecker.AccountingPart.CurrentType =
+                    CurrentType.Aluminium;
+            if(index == 1)
+                _currentTransformerChecker.AccountingPart.CurrentType =
+                    CurrentType.Copper;
             FillCurrentS(index);
             UpdateVisibleRkAndSadd();
         }
@@ -236,6 +247,29 @@ namespace EnergyHack
                 _currentTransformerChecker.AccountingPart.Spr = value;
             }
             UpdateVisibleRkAndSadd();
+        }
+
+        private void kSecurityComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(kSecurityComboBoxEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.KSecurity = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void kSecurityEquipmentTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            if (TryGetValue(kSecurityEquipmentTextEdit, CurrentTransformerErrorProvider, out var value))
+            {
+                _currentTransformerChecker.AccountingPart.KSecurityEquipment = value;
+            }
+            _currentTransformerChecker.Validate();
+        }
+
+        private void DefenceModeCheckEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            DefenceModeLayout.Enabled = DefenceModeCheckEdit.Checked;
         }
 
         #endregion
@@ -263,8 +297,10 @@ namespace EnergyHack
         private void FillAccountingPart()
         {
             var s2Nom = new[] { 0.5, 1, 2, 2.5, 5, 3, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100 };
+            var kBez = new[] {5, 10};
             S2NomComboBoxEdit.ClearAndFill(s2Nom);
             AccuracyClassTypeСomboBoxEdit.ClearAndFill(_typesToListsMap.Keys.ToList());
+            kSecurityComboBoxEdit.ClearAndFill(kBez);
 
             UpdateVisibleRkAndSadd();
         }
@@ -295,12 +331,25 @@ namespace EnergyHack
             _currentTransformerChecker.Validate();
         }
 
+
+        private void UpdateVisibleKSecurity()
+        {
+            var visibility = _currentTransformerChecker.AccountingPart.HasKSecurity
+                ? LayoutVisibility.Always
+                : LayoutVisibility.Never;
+            layoutControlItem22.Visibility = visibility;
+            layoutControlItem23.Visibility = visibility;
+            layoutControlItem24.Visibility = visibility;
+            layoutControlItem25.Visibility = visibility;
+        }
+
         private void FillAccuracy(string type)
         {
             if (_typesToListsMap != null && _typesToListsMap.ContainsKey(type))
             {
                 AccuracyClassComboBoxEdit.ClearAndFill(_typesToListsMap[type].ToList());
             }
+            UpdateAccountingPartOfModel();
         }
 
         private void ClearAccountingPart()
@@ -310,7 +359,36 @@ namespace EnergyHack
         
         private void FillCurrentS(byte selectedIndex)
         {
-            sComboBoxEdit.ClearAndFill(_currentMap[selectedIndex]);
+            if(_currentMap.ContainsKey(selectedIndex))
+                sComboBoxEdit.ClearAndFill(_currentMap[selectedIndex]);
+        }
+
+        private void UpdateBaseModelAfterInitialize()
+        {
+            UNomTTComboBoxEdit_SelectedIndexChanged(null, null);
+            UNomNetworkComboBoxEdit_SelectedIndexChanged(null, null);
+            I1NomComboBoxEdit_SelectedIndexChanged(null, null);
+            IRabMaxComboBoxEdit_TextChanged(null, null);
+            I2NomComboBoxEdit_SelectedIndexChanged(null, null);
+            UNomTTComboBoxEdit_SelectedIndexChanged(null, null);
+            UNomTTComboBoxEdit_SelectedIndexChanged(null, null);
+        }
+
+        private void UpdateAccountingPartOfModel()
+        {
+            AccuracyClassComboBoxEdit_SelectedIndexChanged(null, null);
+            S2NomComboBoxEdit_SelectedIndexChanged(null, null);
+            CurrentTypeRadioGroup_SelectedIndexChanged(null, null);
+            CurrentLengthTextEdit_EditValueChanged(null, null);
+            SprTextEdit_EditValueChanged(null, null);
+            CurrentTypeRadioGroup_SelectedIndexChanged(null, null);
+            UpdateKSecurityPartOfModel();
+        }
+
+        private void UpdateKSecurityPartOfModel()
+        {
+            kSecurityComboBoxEdit_SelectedIndexChanged(null, null);
+            kSecurityEquipmentTextEdit_EditValueChanged(null, null);
         }
 
         #endregion
@@ -319,6 +397,13 @@ namespace EnergyHack
         {
             foreach (var control in _controlsForValidate)
                 TryGetValue(control, CurrentTransformerErrorProvider, out _);
+
+            if (_currentTransformerChecker.AccountingPart == null) return;
+
+            TryGetValue(SaddTextEdit, CurrentTransformerErrorProvider, out _);
+            TryGetValue(RkTextEdit, CurrentTransformerErrorProvider, out _);
+            TryGetValue(CurrentLengthTextEdit, CurrentTransformerErrorProvider, out _);
+            TryGetValue(SprTextEdit, CurrentTransformerErrorProvider, out _);
         }
         
         private static bool TryGetValue(Control control, DXErrorProvider provider, out double value)
@@ -335,11 +420,6 @@ namespace EnergyHack
             }
             value = default(double);
             return false;
-        }
-
-        private void DefenceModeCheckEdit_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

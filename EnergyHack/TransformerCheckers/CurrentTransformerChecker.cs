@@ -19,6 +19,7 @@ namespace EnergyHack.TransformerCheckers
         public event ErrorsChangedHandler ErrorsChanged;
 
         public CurrentTransformerAccountingMode AccountingPart { get; set; }
+        public CurentTransformerRzaMode RzaPart { get; set; }
 
         public double? UNomTT
         {
@@ -45,6 +46,8 @@ namespace EnergyHack.TransformerCheckers
             set
             {
                 _I1nom = value;
+                if (RzaPart != null)
+                    RzaPart.I1Nom = value;
                 Validate();
             }
         }
@@ -66,6 +69,9 @@ namespace EnergyHack.TransformerCheckers
                 _I2nom = value;
                 if (AccountingPart != null)
                     AccountingPart.I2Nom = value;
+
+                if (RzaPart != null)
+                    RzaPart.I2Nom = value;
             }
         }
 
@@ -76,12 +82,14 @@ namespace EnergyHack.TransformerCheckers
             Validate(errors, ValidateU);
             Validate(errors, ValidateI);
             Validate(errors, ValidateK);
+            Validate(errors, ValidateKSecurity);
 
             if (_errors.Equal(errors)) return;
 
             _errors = errors.IsNullOrEmpty() ? null : errors;
             ErrorsChanged?.Invoke(this, _errors);
         }
+
 
         private static void Validate(ICollection<IError> errors, Validator validator)
         {
@@ -107,6 +115,15 @@ namespace EnergyHack.TransformerCheckers
             if (AccountingPart.K > 1)
                 return new SectionError();
             return AccountingPart.RkVisible ? new KError() : null;
+        }
+
+        private IError ValidateKSecurity()
+        {
+            return AccountingPart != null && 
+                   AccountingPart.HasKSecurity &&
+                   AccountingPart.KSecurity > AccountingPart.KSecurityEquipment
+                ? new KSecurityError()
+                : null;
         }
     }
 }

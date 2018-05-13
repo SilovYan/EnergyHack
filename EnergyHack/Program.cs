@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EnergyHack.TransformerCheckers;
 
 namespace EnergyHack
 {
@@ -16,7 +17,7 @@ namespace EnergyHack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CheckerForm());
+            Application.Run(new CheckerForm(new CurrentTransformerChecker()));
         }
     }
 }

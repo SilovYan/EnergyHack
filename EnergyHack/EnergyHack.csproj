@@ -61,12 +61,14 @@
     <Compile Include="Extentions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransformerCheckers\CurentTransformerRZAMode.cs" />
     <Compile Include="TransformerCheckers\CurrentTransformerAccountingMode.cs" />
     <Compile Include="TransformerCheckers\CurrentTransformerChecker.cs" />
     <Compile Include="TransformerCheckers\CurrentTransformerModeBase.cs" />
     <Compile Include="TransformerCheckers\ITransformerChecker.cs" />
-    <Compile Include="TransformerCheckers\KError.cs" />
-    <Compile Include="TransformerCheckers\SectionError.cs" />
+    <Compile Include="Validators\Errors\KError.cs" />
+    <Compile Include="Validators\Errors\KSecurityError.cs" />
+    <Compile Include="Validators\Errors\SectionError.cs" />
     <Compile Include="TransformerCheckers\VoltageTransformerChecker.cs" />
     <Compile Include="Validators\Errors\AmperageError.cs" />
     <Compile Include="Validators\Errors\IError.cs" />
