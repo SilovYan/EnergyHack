@@ -135,6 +135,31 @@
             this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
             this.IterTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.VoltUnTTComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltUnNetworkComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltS2NomComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltDestinitionComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltAccuracyClassComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem50 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltAimComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem51 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltMaxSTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem52 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltRecomentRTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem53 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltCurrentLengthTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem54 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.VoltsCurrentTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem55 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.separatorControl6 = new DevExpress.XtraEditors.SeparatorControl();
+            this.layoutControlItem56 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -220,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TNControl)).BeginInit();
+            this.TNControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTransformerErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageTransformerErrorProvider)).BeginInit();
@@ -239,6 +265,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IterTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltUnTTComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltUnNetworkComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltS2NomComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltDestinitionComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltAccuracyClassComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltAimComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltMaxSTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltRecomentRTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltCurrentLengthTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltsCurrentTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -1140,6 +1190,18 @@
             // 
             // TNControl
             // 
+            this.TNControl.Controls.Add(this.separatorControl6);
+            this.TNControl.Controls.Add(this.VoltsCurrentTextEdit);
+            this.TNControl.Controls.Add(this.VoltCurrentLengthTextEdit);
+            this.TNControl.Controls.Add(this.VoltRecomentRTextEdit);
+            this.TNControl.Controls.Add(this.VoltMaxSTextEdit);
+            this.TNControl.Controls.Add(this.VoltAimComboBoxEdit);
+            this.TNControl.Controls.Add(this.VoltAccuracyClassComboBoxEdit);
+            this.TNControl.Controls.Add(this.VoltDestinitionComboBoxEdit);
+            this.TNControl.Controls.Add(this.VoltS2NomComboBoxEdit);
+            this.TNControl.Controls.Add(this.VoltUnNetworkComboBoxEdit);
+            this.TNControl.Controls.Add(this.VoltUnTTComboBoxEdit);
+            this.TNControl.Controls.Add(this.labelControl7);
             this.TNControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TNControl.Location = new System.Drawing.Point(0, 0);
             this.TNControl.Name = "TNControl";
@@ -1152,8 +1214,22 @@
             // 
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem45,
+            this.emptySpaceItem4,
+            this.layoutControlItem46,
+            this.layoutControlItem47,
+            this.layoutControlItem48,
+            this.layoutControlItem49,
+            this.layoutControlItem50,
+            this.layoutControlItem51,
+            this.layoutControlItem52,
+            this.layoutControlItem53,
+            this.layoutControlItem54,
+            this.layoutControlItem55,
+            this.layoutControlItem56});
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(684, 565);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(696, 689);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // CurrentTransformerErrorProvider
@@ -1323,6 +1399,318 @@
             this.layoutControlItem44.Text = "Пред. ток терм. стойкости, кА";
             this.layoutControlItem44.TextSize = new System.Drawing.Size(168, 13);
             // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(12, 12);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(95, 13);
+            this.labelControl7.StyleController = this.TNControl;
+            this.labelControl7.TabIndex = 4;
+            this.labelControl7.Text = "Проверка ТТ по Uн";
+            // 
+            // layoutControlItem45
+            // 
+            this.layoutControlItem45.Control = this.labelControl7;
+            this.layoutControlItem45.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem45.Name = "layoutControlItem45";
+            this.layoutControlItem45.Size = new System.Drawing.Size(676, 17);
+            this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem45.TextVisible = false;
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 257);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(676, 412);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // VoltUnTTComboBoxEdit
+            // 
+            this.VoltUnTTComboBoxEdit.Location = new System.Drawing.Point(164, 29);
+            this.VoltUnTTComboBoxEdit.Name = "VoltUnTTComboBoxEdit";
+            this.VoltUnTTComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VoltUnTTComboBoxEdit.Properties.Items.AddRange(new object[] {
+            "3",
+            "3,15",
+            "3,3",
+            "5",
+            "6",
+            "6,3",
+            "6,6",
+            "6,9",
+            "10",
+            "10,5",
+            "11",
+            "13,8",
+            "15",
+            "15,75",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "27",
+            "27,5",
+            "33",
+            "35",
+            "36",
+            "110",
+            "150",
+            "220",
+            "330",
+            "500",
+            "750"});
+            this.VoltUnTTComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VoltUnTTComboBoxEdit.Size = new System.Drawing.Size(182, 20);
+            this.VoltUnTTComboBoxEdit.StyleController = this.TNControl;
+            this.VoltUnTTComboBoxEdit.TabIndex = 5;
+            this.VoltUnTTComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.VoltUnTTComboBoxEdit_SelectedIndexChanged);
+            // 
+            // layoutControlItem46
+            // 
+            this.layoutControlItem46.Control = this.VoltUnTTComboBoxEdit;
+            this.layoutControlItem46.Location = new System.Drawing.Point(0, 17);
+            this.layoutControlItem46.Name = "layoutControlItem46";
+            this.layoutControlItem46.Size = new System.Drawing.Size(338, 24);
+            this.layoutControlItem46.Text = "Uн тт, кВ";
+            this.layoutControlItem46.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltUnNetworkComboBoxEdit
+            // 
+            this.VoltUnNetworkComboBoxEdit.Location = new System.Drawing.Point(502, 29);
+            this.VoltUnNetworkComboBoxEdit.Name = "VoltUnNetworkComboBoxEdit";
+            this.VoltUnNetworkComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VoltUnNetworkComboBoxEdit.Properties.Items.AddRange(new object[] {
+            "3",
+            "6",
+            "10",
+            "15",
+            "20",
+            "24",
+            "27",
+            "35",
+            "110",
+            "150",
+            "220",
+            "330",
+            "500",
+            "750"});
+            this.VoltUnNetworkComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VoltUnNetworkComboBoxEdit.Size = new System.Drawing.Size(182, 20);
+            this.VoltUnNetworkComboBoxEdit.StyleController = this.TNControl;
+            this.VoltUnNetworkComboBoxEdit.TabIndex = 6;
+            this.VoltUnNetworkComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.VoltUnNetworkComboBoxEdit_SelectedIndexChanged);
+            // 
+            // layoutControlItem47
+            // 
+            this.layoutControlItem47.Control = this.VoltUnNetworkComboBoxEdit;
+            this.layoutControlItem47.Location = new System.Drawing.Point(338, 17);
+            this.layoutControlItem47.Name = "layoutControlItem47";
+            this.layoutControlItem47.Size = new System.Drawing.Size(338, 24);
+            this.layoutControlItem47.Text = "Uн сети, кВ";
+            this.layoutControlItem47.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltS2NomComboBoxEdit
+            // 
+            this.VoltS2NomComboBoxEdit.Location = new System.Drawing.Point(164, 77);
+            this.VoltS2NomComboBoxEdit.Name = "VoltS2NomComboBoxEdit";
+            this.VoltS2NomComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VoltS2NomComboBoxEdit.Properties.Items.AddRange(new object[] {
+            "1",
+            "2,5",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "45",
+            "50",
+            "75",
+            "100",
+            "150",
+            "200",
+            "300",
+            "400",
+            "500",
+            "600",
+            "800",
+            "1000",
+            "1200"});
+            this.VoltS2NomComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VoltS2NomComboBoxEdit.Size = new System.Drawing.Size(520, 20);
+            this.VoltS2NomComboBoxEdit.StyleController = this.TNControl;
+            this.VoltS2NomComboBoxEdit.TabIndex = 7;
+            this.VoltS2NomComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.VoltS2NomComboBoxEdit_SelectedIndexChanged);
+            // 
+            // layoutControlItem48
+            // 
+            this.layoutControlItem48.Control = this.VoltS2NomComboBoxEdit;
+            this.layoutControlItem48.Location = new System.Drawing.Point(0, 65);
+            this.layoutControlItem48.Name = "layoutControlItem48";
+            this.layoutControlItem48.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem48.Text = "S2ном ТН, ВА";
+            this.layoutControlItem48.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltDestinitionComboBoxEdit
+            // 
+            this.VoltDestinitionComboBoxEdit.Location = new System.Drawing.Point(164, 101);
+            this.VoltDestinitionComboBoxEdit.Name = "VoltDestinitionComboBoxEdit";
+            this.VoltDestinitionComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VoltDestinitionComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VoltDestinitionComboBoxEdit.Size = new System.Drawing.Size(520, 20);
+            this.VoltDestinitionComboBoxEdit.StyleController = this.TNControl;
+            this.VoltDestinitionComboBoxEdit.TabIndex = 8;
+            this.VoltDestinitionComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.VoltDestinitionComboBoxEdit_SelectedIndexChanged);
+            // 
+            // layoutControlItem49
+            // 
+            this.layoutControlItem49.Control = this.VoltDestinitionComboBoxEdit;
+            this.layoutControlItem49.Location = new System.Drawing.Point(0, 89);
+            this.layoutControlItem49.Name = "layoutControlItem49";
+            this.layoutControlItem49.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem49.Text = "Назначение втор. обмотки";
+            this.layoutControlItem49.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltAccuracyClassComboBoxEdit
+            // 
+            this.VoltAccuracyClassComboBoxEdit.Location = new System.Drawing.Point(164, 125);
+            this.VoltAccuracyClassComboBoxEdit.Name = "VoltAccuracyClassComboBoxEdit";
+            this.VoltAccuracyClassComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VoltAccuracyClassComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VoltAccuracyClassComboBoxEdit.Size = new System.Drawing.Size(520, 20);
+            this.VoltAccuracyClassComboBoxEdit.StyleController = this.TNControl;
+            this.VoltAccuracyClassComboBoxEdit.TabIndex = 9;
+            this.VoltAccuracyClassComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.VoltAccuracyClassComboBoxEdit_SelectedIndexChanged);
+            // 
+            // layoutControlItem50
+            // 
+            this.layoutControlItem50.Control = this.VoltAccuracyClassComboBoxEdit;
+            this.layoutControlItem50.Location = new System.Drawing.Point(0, 113);
+            this.layoutControlItem50.Name = "layoutControlItem50";
+            this.layoutControlItem50.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem50.Text = "Класс точности";
+            this.layoutControlItem50.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltAimComboBoxEdit
+            // 
+            this.VoltAimComboBoxEdit.Location = new System.Drawing.Point(164, 149);
+            this.VoltAimComboBoxEdit.Name = "VoltAimComboBoxEdit";
+            this.VoltAimComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VoltAimComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VoltAimComboBoxEdit.Size = new System.Drawing.Size(520, 20);
+            this.VoltAimComboBoxEdit.StyleController = this.TNControl;
+            this.VoltAimComboBoxEdit.TabIndex = 10;
+            this.VoltAimComboBoxEdit.SelectedIndexChanged += new System.EventHandler(this.VoltAimComboBoxEdit_SelectedIndexChanged);
+            // 
+            // layoutControlItem51
+            // 
+            this.layoutControlItem51.Control = this.VoltAimComboBoxEdit;
+            this.layoutControlItem51.Location = new System.Drawing.Point(0, 137);
+            this.layoutControlItem51.Name = "layoutControlItem51";
+            this.layoutControlItem51.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem51.Text = "Назначение измерителя";
+            this.layoutControlItem51.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltMaxSTextEdit
+            // 
+            this.VoltMaxSTextEdit.Location = new System.Drawing.Point(164, 173);
+            this.VoltMaxSTextEdit.Name = "VoltMaxSTextEdit";
+            this.VoltMaxSTextEdit.Size = new System.Drawing.Size(520, 20);
+            this.VoltMaxSTextEdit.StyleController = this.TNControl;
+            this.VoltMaxSTextEdit.TabIndex = 11;
+            this.VoltMaxSTextEdit.EditValueChanged += new System.EventHandler(this.VoltMaxSTextEdit_EditValueChanged);
+            // 
+            // layoutControlItem52
+            // 
+            this.layoutControlItem52.Control = this.VoltMaxSTextEdit;
+            this.layoutControlItem52.Location = new System.Drawing.Point(0, 161);
+            this.layoutControlItem52.Name = "layoutControlItem52";
+            this.layoutControlItem52.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem52.Text = "Наиб. нагрузка на ТН, ВА";
+            this.layoutControlItem52.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltRecomentRTextEdit
+            // 
+            this.VoltRecomentRTextEdit.Location = new System.Drawing.Point(164, 197);
+            this.VoltRecomentRTextEdit.Name = "VoltRecomentRTextEdit";
+            this.VoltRecomentRTextEdit.Size = new System.Drawing.Size(520, 20);
+            this.VoltRecomentRTextEdit.StyleController = this.TNControl;
+            this.VoltRecomentRTextEdit.TabIndex = 12;
+            this.VoltRecomentRTextEdit.EditValueChanged += new System.EventHandler(this.VoltRecomentRTextEdit_EditValueChanged);
+            // 
+            // layoutControlItem53
+            // 
+            this.layoutControlItem53.Control = this.VoltRecomentRTextEdit;
+            this.layoutControlItem53.Enabled = false;
+            this.layoutControlItem53.Location = new System.Drawing.Point(0, 185);
+            this.layoutControlItem53.Name = "layoutControlItem53";
+            this.layoutControlItem53.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem53.Text = "Рекоменд. нагруз. R, Ом";
+            this.layoutControlItem53.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltCurrentLengthTextEdit
+            // 
+            this.VoltCurrentLengthTextEdit.Location = new System.Drawing.Point(164, 221);
+            this.VoltCurrentLengthTextEdit.Name = "VoltCurrentLengthTextEdit";
+            this.VoltCurrentLengthTextEdit.Size = new System.Drawing.Size(520, 20);
+            this.VoltCurrentLengthTextEdit.StyleController = this.TNControl;
+            this.VoltCurrentLengthTextEdit.TabIndex = 13;
+            this.VoltCurrentLengthTextEdit.EditValueChanged += new System.EventHandler(this.VoltCurrentLengthTextEdit_EditValueChanged);
+            // 
+            // layoutControlItem54
+            // 
+            this.layoutControlItem54.Control = this.VoltCurrentLengthTextEdit;
+            this.layoutControlItem54.Location = new System.Drawing.Point(0, 209);
+            this.layoutControlItem54.Name = "layoutControlItem54";
+            this.layoutControlItem54.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem54.Text = "Длина медного провода, м";
+            this.layoutControlItem54.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // VoltsCurrentTextEdit
+            // 
+            this.VoltsCurrentTextEdit.Location = new System.Drawing.Point(164, 245);
+            this.VoltsCurrentTextEdit.Name = "VoltsCurrentTextEdit";
+            this.VoltsCurrentTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.VoltsCurrentTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.VoltsCurrentTextEdit.Size = new System.Drawing.Size(520, 20);
+            this.VoltsCurrentTextEdit.StyleController = this.TNControl;
+            this.VoltsCurrentTextEdit.TabIndex = 14;
+            this.VoltsCurrentTextEdit.EditValueChanged += new System.EventHandler(this.VoltsCurrentTextEdit_EditValueChanged);
+            // 
+            // layoutControlItem55
+            // 
+            this.layoutControlItem55.Control = this.VoltsCurrentTextEdit;
+            this.layoutControlItem55.Location = new System.Drawing.Point(0, 233);
+            this.layoutControlItem55.Name = "layoutControlItem55";
+            this.layoutControlItem55.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem55.Text = "Сеч. медного провода, кв.мм";
+            this.layoutControlItem55.TextSize = new System.Drawing.Size(149, 13);
+            // 
+            // separatorControl6
+            // 
+            this.separatorControl6.Location = new System.Drawing.Point(12, 53);
+            this.separatorControl6.Name = "separatorControl6";
+            this.separatorControl6.Size = new System.Drawing.Size(672, 20);
+            this.separatorControl6.TabIndex = 15;
+            // 
+            // layoutControlItem56
+            // 
+            this.layoutControlItem56.Control = this.separatorControl6;
+            this.layoutControlItem56.Location = new System.Drawing.Point(0, 41);
+            this.layoutControlItem56.Name = "layoutControlItem56";
+            this.layoutControlItem56.Size = new System.Drawing.Size(676, 24);
+            this.layoutControlItem56.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem56.TextVisible = false;
+            // 
             // CheckerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1416,6 +1804,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TNControl)).EndInit();
+            this.TNControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTransformerErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoltageTransformerErrorProvider)).EndInit();
@@ -1435,6 +1824,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IterTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltUnTTComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltUnNetworkComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltS2NomComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltDestinitionComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltAccuracyClassComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltAimComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltMaxSTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltRecomentRTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltCurrentLengthTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VoltsCurrentTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1547,6 +1960,31 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem42;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem43;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem44;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl6;
+        private DevExpress.XtraEditors.ComboBoxEdit VoltsCurrentTextEdit;
+        private DevExpress.XtraEditors.TextEdit VoltCurrentLengthTextEdit;
+        private DevExpress.XtraEditors.TextEdit VoltRecomentRTextEdit;
+        private DevExpress.XtraEditors.TextEdit VoltMaxSTextEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit VoltAimComboBoxEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit VoltAccuracyClassComboBoxEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit VoltDestinitionComboBoxEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit VoltS2NomComboBoxEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit VoltUnNetworkComboBoxEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit VoltUnTTComboBoxEdit;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem46;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem47;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem48;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem49;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem50;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem51;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem52;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem53;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem54;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem55;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem56;
     }
 }
 

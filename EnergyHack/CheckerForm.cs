@@ -625,5 +625,54 @@ namespace EnergyHack
             return false;
         }
 
+        private void VoltUnTTComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltUnNetworkComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltS2NomComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltDestinitionComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltAccuracyClassComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltAimComboBoxEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltMaxSTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltRecomentRTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltCurrentLengthTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VoltsCurrentTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
